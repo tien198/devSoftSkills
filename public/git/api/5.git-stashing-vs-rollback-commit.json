@@ -1,0 +1,1038 @@
+{
+    "slug": "git-stashing-va-rollback-commit",
+    "title": "5. Git Stashing và Rollback Commit",
+    "metaDescription": "Hướng dẫn chi tiết về cách sử dụng Git Stashing để lưu trữ tạm thời công việc và Rollback Commit để quản lý lịch sử thay đổi trong dự án.",
+    "author": "Admin",
+    "publishedAt": "2023-10-27",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Git stashing"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Đây là một câu lệnh khá thú vị trong Git. Hãy tưởng tượng nhé, khi bạn đang thực hiện code trên Git, đột nhiên xuất hiện một vấn đề ở phần workload cũ khiến bạn phải tạm dừng công việc hiện tại để quay lại sửa gấp. Bạn có thể tạo một branch mới để bắt tay vào việc sửa chữa vấn đề ở workload cũ. Với phần việc còn đang dang dở của mình, bạn sẽ có 2 lựa chọn:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Chạy git reset –hard để loại bỏ những thay đổi đã được commit của bạn."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Ghi lại công việc chưa hoàn tất của bạn như một commit mới."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Cả 2 giải pháp có vẻ đều không được chu toàn lắm. Cái đầu tiên làm mất tất cả những thứ bạn đã làm, trong khi cái sau lại tạo ra một commit vô nghĩa."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Đây là lúc mà lệnh Git stash phát huy tác dụng. Hãy nghĩ thế này, Git stash sẽ có tác dụng giống câu lệnh git reset –hard, nó cho bạn một branch sạch sẽ, nhưng cũng sẽ ghi lại các thay đổi về code, file mà bạn vừa làm việc. Sau đó, khi bạn muốn bắt đầu công việc, bạn có thể tái áp dụng những thay đổi này và tiếp tục công việc còn dở dang. Git stash giống như một nút “tạm dừng” cho tiến trình công việc của bạn."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/5.1.1.1.jpg",
+            "alt": "git stash"
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Dưới đây là một vài câu lệnh git stash mà bạn cần biết:"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. Git stash save"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Cả "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git stash "
+                },
+                {
+                    "type": "text",
+                    "value": "hay  "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git stash save "
+                },
+                {
+                    "type": "text",
+                    "value": "đều có cùng một cơ chế. Git sẽ tạo ra một commit khi bạn sử dụng 1 trong 2 lệnh và nó được lưu trữ lại trong repo của bạn."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git stash "
+                },
+                {
+                    "type": "text",
+                    "value": "cùng với một tin nhắn đi kèm:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash save \"_ghi_chú\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Git stash những files không được theo dõi "
+                },
+                {
+                    "type": "bold",
+                    "value": "(untracked files)"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash save -u"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "or"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash save --include-untracked"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. Git stash list"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lệnh này giúp bạn có thể xem danh sách stash đã tạo."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash list"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ta sẽ được kết quả:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/5.1.2.1.jpg",
+            "alt": "Kết quả lệnh git stash list",
+            "caption": "Đây là danh sách các stashes mà bạn tạo ra, và cái gần nhất bạn tạo sẽ ở trên đầu."
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "3. Git stash apply"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lệnh này cơ bản là sẽ lấy stash cuối cùng để apply vào code của bạn."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash apply"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bạn cũng có thể apply một stash khác bằng cách thêm ID vào sau câu lệnh trên."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash apply stash@{1}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "4. Git stash pop"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Về cơ bản thì câu lệnh này có tác dụng y hệt câu lệnh Git apply. Có điều là sau khi apply vào code thì sẽ xóa stash đó khỏi danh sách stash của bạn luôn. Cũng tương tự nếu bạn không muốn apply stash gần nhất mà một stash trước đó thì bạn chỉ cần thêm ID của nó vào sau câu lệnh."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash pop stash@{1}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "5. Git stash show"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lệnh này sẽ hiển thị ngắn gọn những thay đổi của stash cuối cùng."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash show"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Nếu bạn muốn xem toàn bộ những thay đổi thì chỉ cần thêm -p vào sau câu lệnh."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash show -p"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tương tự nếu bạn muốn xem thay đổi của các stash trước thì chỉ cần thêm ID vào sau câu lệnh."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash show stash@{1}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "6. Git stash branch <name>"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tạo một branch mới với những thay đổi tương ứng trong stash gần nhất. Câu lệnh này đồng thời cũng xóa nó khỏi stash list như Git stash pop."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash branch <new_branch_name>"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tương tự, nếu bạn muốn một stash cụ thể thì thêm ID vào sau câu lệnh."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash branch <new_branch_name> stash@{id}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "7. Git stash clear"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Xóa toàn bộ stash bạn lưu trữ trong repo. Lưu ý rằng bạn không thể revert (quay trở lại) lúc chưa xóa nên hãy cẩn thận nhé."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash clear"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "8. Git stash drop"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Câu lệnh này giúp bạn xóa stash mà bạn thấy không cần thiết."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash drop"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Xóa stash cụ thể:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git stash drop stash@{id}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Rollback Commit"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lịch sử commit của Git được thiết kế để không thay đổi và theo dõi mọi sự thay đổi trong dự án mà bạn đang làm. Tuy nhiên, có những lúc bạn sẽ nhận ra rằng mình vừa viết những dòng code sai và ngớ ngẩn. Trong quá trình phát triển phần mềm, việc phải rollback một số commit bị lỗi là không thể tránh khỏi."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Vậy có cách nào để có thể hoàn tác các thay đổi như đưa file trở về commit trước đó, chuyển đổi giữa các nhánh trong kho lưu trữ….Ở phần này chúng ta sẽ tìm hiểu về các câu lệnh Git hỗ trợ ta làm những điều đó nhé. "
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": " Câu lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "git checkout"
+                },
+                {
+                    "type": "text",
+                    "value": " được sinh ra nhằm giúp người dùng di chuyển giữa các branch hoặc để phục hồi file trong thư mục làm việc từ một commit trước đây."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. Chuyển nhánh"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Giả sử bạn đang ở một branch nào đó và muốn di chuyển sang nhánh master thì câu lệnh mà bạn cần thực hiện là:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git checkout master"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lúc này nhánh master hoạt động, các thư mục làm việc của bạn sẽ là các file tương ứng với branch này (câu lệnh này có tác dụng y hệt câu git switch)."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. Phục hồi phiên bản commit cũ"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tưởng tượng bạn có một file index.html bạn muốn phục hồi nó về phiên bản ở commit có ID là HASH, thì câu lệnh bạn cần thực hiện là:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git checkout <commit_id> index.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Hay nếu bạn đơm giản chỉ muốn phục hồi nội dung file ở commit trước đó thì là:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git checkout index.html"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Vậy nếu bạn muốn thực hiện trở về phiên bản commit cũ với tất cả các file thì sao? Câu lệnh bạn cần sẽ là:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git checkout <commit_id>"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "3. Git reset"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git Reset "
+                },
+                {
+                    "type": "text",
+                    "value": "được dùng để quay về một điểm commit nào đó, đồng thời xóa lịch sử của các commit trước nó."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Hãy theo dõi ví dụ dưới đây:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/5.2.3.1.jpg",
+            "alt": "Sơ đồ commit trước khi reset (A, B, C, D)",
+            "caption": null
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Giả sử, lịch sử commit của bạn có các điểm commit như trong ảnh (A,B,C,D) tương ứng với các commit_id phía trên. A, B là các commit bình thường; C, D là các commit gặp vấn đề (viết code sai, xóa nhầm file, …). Lúc này bạn hoàn toàn có thể quay trở lại commit B bằng câu lệnh:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git reset --hard a0fvf8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sau khi chạy xong câu lệnh trên, ta có kết quả:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/5.2.3.2.jpg",
+            "alt": "Sơ đồ commit sau khi reset (A, B)",
+            "caption": null
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Như bạn đang thấy, con trỏ "
+                },
+                {
+                    "type": "bold",
+                    "value": "HEAD "
+                },
+                {
+                    "type": "text",
+                    "value": "đang trỏ đến vị trí của commit B, đồng thời lịch sử commit C và D cũng biến mất, giống như bạn chưa từng thực hiện 2 commit đó vậy. Lịch sử commit của bạn cũng trông sạch sẽ và gọn gàng hơn nhiều. Tuy nhiên, các thay đổi này mới chỉ đang diễn ra trên local repository, để cập nhật thay đổi này lên remote repository bạn cần thực hiện lệnh:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git push -f origin <branch_name>"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "3 hình thức của Git reset:"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tùy thuộc vào hoàn cảnh cũng như mục đích mà chúng ta cần reset với các chế độ khác nhau, do vậy git cung cấp cho ta 3 lựa chọn đi kèm là: "
+                },
+                {
+                    "type": "bold",
+                    "value": "--soft"
+                },
+                {
+                    "type": "text",
+                    "value": ", "
+                },
+                {
+                    "type": "bold",
+                    "value": "--hard"
+                },
+                {
+                    "type": "text",
+                    "value": ", "
+                },
+                {
+                    "type": "bold",
+                    "value": "--mixed"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Git reset <commit_id> "
+                        },
+                        {
+                            "type": "text",
+                            "value": "(Mặc định là "
+                        },
+                        {
+                            "type": "bold",
+                            "value": "--mixed"
+                        },
+                        {
+                            "type": "text",
+                            "value": "): di chuyển con trỏ "
+                        },
+                        {
+                            "type": "bold",
+                            "value": "HEAD "
+                        },
+                        {
+                            "type": "text",
+                            "value": "về vị trí commit reset và vẫn giữ nguyên tất cả các thay đổi của file, nhưng sẽ loại bỏ các thay đổi khỏi staging area."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Git reset –soft <commit_id>:"
+                        },
+                        {
+                            "type": "text",
+                            "value": " chỉ di chuyển HEAD về vị trí commit. Trạng thái của staging area và tất cả các thay đổi của file được giữ nguyên."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Git reset –hard <commit_id>:"
+                        },
+                        {
+                            "type": "text",
+                            "value": " di chuyển con trỏ HEAD về vị trí commit reset và loại bỏ tất cả các thay đổi của file."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "4. Git revert"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git revert"
+                },
+                {
+                    "type": "text",
+                    "value": " cũng giúp cho bạn có thể quay trở lại commit trước. Tuy nhiên "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git revert"
+                },
+                {
+                    "type": "text",
+                    "value": " không làm mất các commit, thay vào đó sẽ tạo thêm commit mới có nội dung giống hệt với commit bạn muốn quay trở về."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/5.2.4.1.jpg",
+            "alt": "Sơ đồ commit sau khi revert (A, B, C, D, D', C')",
+            "caption": null
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tương tự như với Git Reset, điều chúng ta cần thực hiện là "
+                },
+                {
+                    "type": "bold",
+                    "value": "revert về commit D, "
+                },
+                {
+                    "type": "text",
+                    "value": "rồi tiếp tục "
+                },
+                {
+                    "type": "bold",
+                    "value": "revert về commit C."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git revert 51k4er"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git revert 76sdeb"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Kết quả sau khi chạy 2 lệnh trên là:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/5.2.4.2.jpg",
+            "alt": "Sơ đồ commit sau khi revert (A, B, C, D, D', C')",
+            "caption": null
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ở đây, ta sẽ thấy rằng có thêm 2 commit mới D’ và C’ được tạo ra."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tóm lại, "
+                },
+                {
+                    "type": "bold",
+                    "value": "git reset thì xóa lịch sử commit"
+                },
+                {
+                    "type": "text",
+                    "value": " giúp lịch sử trông gọn gàng hơn, còn "
+                },
+                {
+                    "type": "bold",
+                    "value": "git revert sẽ tạo ra thêm commit mới"
+                },
+                {
+                    "type": "text",
+                    "value": " đồng thời giữ lại lịch sử commit trước đó."
+                }
+            ]
+        }
+    ]
+}

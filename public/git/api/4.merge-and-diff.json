@@ -1,0 +1,854 @@
+{
+    "slug": "git-merge-va-git-diff",
+    "title": "Git Merge và Git Diff: Hợp nhất nhánh, Xử lý xung đột và Theo dõi thay đổi",
+    "metaDescription": "Tìm hiểu chi tiết về lệnh Git Merge để hợp nhất các nhánh, quy trình Rebasing, cách xử lý xung đột 3 chiều. Đồng thời, tìm hiểu lệnh Git Diff để kiểm tra các thay đổi ở các khu vực khác nhau.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Git Merge"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git Merge"
+                },
+                {
+                    "type": "text",
+                    "value": " là một lệnh dùng để hợp nhất các chi nhánh độc lập thành một nhánh duy nhất trong Git. Khi sử dụng lệnh hợp nhất, chỉ có nhánh hiện tại được cập nhập để phản ánh sự hợp nhất, còn nhánh đích sẽ không bị ảnh hưởng. Điều này đồng nghĩa với việc, "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git Merge"
+                },
+                {
+                    "type": "text",
+                    "value": " thường được sử dụng kết hợp với "
+                },
+                {
+                    "type": "bold",
+                    "value": "git checkout"
+                },
+                {
+                    "type": "text",
+                    "value": " để chọn nhánh hiện tại và "
+                },
+                {
+                    "type": "bold",
+                    "value": "git branch"
+                },
+                {
+                    "type": "text",
+                    "value": " để xóa nhánh nguồn đã lỗi thời."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. Cách thức hoạt động của Git Merge"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Công dụng chính của lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git Merge"
+                },
+                {
+                    "type": "text",
+                    "value": " là hợp nhất 2 nhánh. Hơn thế, nó còn được dùng để hợp nhất chuỗi commit (cam kết) thành một lịch sử thống nhất."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong hình minh họa bên dưới, "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git Merge"
+                },
+                {
+                    "type": "text",
+                    "value": " sẽ lấy hai nhánh và tìm thấy một commit cơ sở chung, nó sẽ tạo một "
+                },
+                {
+                    "type": "bold",
+                    "value": "cam kết hợp nhất (merge commit)"
+                },
+                {
+                    "type": "text",
+                    "value": " mới và hợp nhất các thay đổi theo trình tự của mỗi cam kết. Ở đây, chúng ta có 2 nhánh: nhánh master và nhánh stage, và nhánh stage sẽ được hợp nhất với nhánh master."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/4.1.1.1.jpg",
+            "alt": "git merge"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "[Video: Gộp nhánh (cơ bản)]"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "[Video: Gộp nhánh (nâng cao)]"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. Rebasing commit"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Rebasing"
+                },
+                {
+                    "type": "text",
+                    "value": " là một quy trình để áp dụng lại các commit trên một nhánh nào đó. Nó được sử dụng để áp dụng một chuỗi các commit từ các nhánh khác nhau thành một commit cuối cùng. Về cơ bản, nó là một thay thế của lệnh hợp nhất git, một quá trình hợp nhất tuyến tính."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Có thể hiểu rằng lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "Rebase"
+                },
+                {
+                    "type": "text",
+                    "value": " là một sự thay thế của lệnh hợp nhất. Hợp nhất luôn là một bản ghi thay đổi về phía trước."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/4.1.2.1.jpg",
+            "alt": "rebasing commit",
+            "caption": "cách hoạt động của git rebase. Ba commit của nhánh chính được được hợp nhất tuyến tính, chứ không bị đè lên nhau với các commit của nhánh phụ (nhánh Test)."
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Giả sử bạn đã thực hiện 3 lần commit trong nhánh chính ("
+                },
+                {
+                    "type": "bold",
+                    "value": "Master"
+                },
+                {
+                    "type": "text",
+                    "value": ") và 3 lần trong nhánh phụ ("
+                },
+                {
+                    "type": "bold",
+                    "value": "nhánh Test"
+                },
+                {
+                    "type": "text",
+                    "value": "). Nếu bạn hợp nhất bằng lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "merge"
+                },
+                {
+                    "type": "text",
+                    "value": " thì nó sẽ hợp nhất tất cả commit đó trong một thời gian. Nhưng nếu bạn "
+                },
+                {
+                    "type": "bold",
+                    "value": "rebase"
+                },
+                {
+                    "type": "text",
+                    "value": " lại nó, thì nó sẽ được hợp nhất theo cách tuyến tính."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "3. Xử lý xung đột khi Git Merge"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Khi bạn muốn hợp nhất hai nhánh và phần giống nhau của cùng một tệp bị thay đổi, "
+                },
+                {
+                    "type": "bold",
+                    "value": "xung đột hợp nhất"
+                },
+                {
+                    "type": "text",
+                    "value": " xảy ra. Nguyên nhân là do Git không tìm ra phiên bản nào sẽ được sử dụng. Khi điều này xảy ra, Git sẽ dừng trước khi commit hợp nhất nhằm giải quyết xung đột đó. "
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lưu ý rằng xung đột "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git merge"
+                },
+                {
+                    "type": "text",
+                    "value": " chỉ xảy ra trong trường hợp nhất 3 chiều. Thông thường, Git sử dụng quy trình edit/stage/commit để giải quyết xung đột này. Việc chạy "
+                },
+                {
+                    "type": "bold",
+                    "value": "git status"
+                },
+                {
+                    "type": "text",
+                    "value": " sẽ giải quyết việc này bằng cách hiển thị các tệp cần được giải quyết."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/4.1.3.1.jpg",
+            "alt": "merge conflic"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong trường hợp có xung đột xảy ra, Git sẽ chỉnh sửa nội dung của các tệp bị ảnh hưởng bằng cách đánh dấu cả 2 mặt của nội dung xung đột. Các điểm đánh dấu trực quan này là:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "<<<<<<<-"
+                        },
+                        {
+                            "type": "text",
+                            "value": " đánh dấu xung đột, xung đột bắt đầu sau dòng này."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "=======-"
+                        },
+                        {
+                            "type": "text",
+                            "value": " phân chia những thay đổi của bạn với những thay đổi trong nhánh khác."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": ">>>>>>>-"
+                        },
+                        {
+                            "type": "text",
+                            "value": " kết thúc các dòng mẫu thuẫn."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sau khi tìm thấy và sửa các xung đột, bạn sẽ chạy lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "git add"
+                },
+                {
+                    "type": "text",
+                    "value": " trên các tệp xung đột để báo cho Git biết đã giải quyết xong. Sau đó, bạn chạy lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "git commit"
+                },
+                {
+                    "type": "text",
+                    "value": " để tạo cam kết hợp nhất."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Git Diff"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. Xem các thay đổi với câu lệnh Git Diff"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git diff"
+                },
+                {
+                    "type": "text",
+                    "value": " là lệnh kiểm tra sự thay đổi giữa thư mục làm việc và commit cuối, giữa index và commit cuối, giữa các nhánh."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": " Khi nó được thực thi, nó sẽ chạy một chức năng khác trên các nguồn dữ liệu Git. Các nguồn dữ liệu này có thể là file, branch, commit và hơn thế. Nó được sử dụng để hiện thị các thay đổi giữa các commit, commit và cây làm việc, ..."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Câu lệnh mẫu:"
+                },
+                {
+                    "type": "text",
+                    "value": " git diff --<lệnh tương ứng>"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. Các trường hợp sử dụng lệnh Git Diff"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Trường hợp 1: Theo dõi những thay đổi chưa được đưa vào staging area"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Việc sử dụng thông thường của lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git diff"
+                },
+                {
+                    "type": "text",
+                    "value": " là để theo dõi các thay đổi chưa được đưa vào "
+                },
+                {
+                    "type": "bold",
+                    "value": "staging area"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Giả sử chúng ta đã chỉnh sửa file newfile1.txt. Bây giờ, chúng ta muốn theo dõi những thay đổi nào chưa được thực hiện. Sau đó, chúng ta có thể làm như vậy từ lệnh Git diff, hãy quan sát đầu ra dưới đây:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/4.2.2.1.jpg",
+            "alt": "git diff"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Từ kết quả trên, ta có thể thấy rằng các thay đổi thực hiện trên "
+                },
+                {
+                    "type": "bold",
+                    "value": "newfile1.txt"
+                },
+                {
+                    "type": "text",
+                    "value": " được hiển thị bằng lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "git diff"
+                },
+                {
+                    "type": "text",
+                    "value": ". Phần được đánh dấu là những thay đổi trong file được cập nhật. Bây giờ, chúng ta có thể quyết định xem có muốn phân đoạn file đó hay không bằng cách xem trước các thay đổi."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Trường hợp 2: Theo dõi những thay đổi đã diễn ra nhưng không được commit (trong staging area)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "git diff"
+                },
+                {
+                    "type": "text",
+                    "value": " cho phép chúng ta theo dõi các thay đổi được thực hiện nhưng không được commit. Chúng ta có thể theo dõi những thay đổi trong "
+                },
+                {
+                    "type": "bold",
+                    "value": "staging area"
+                },
+                {
+                    "type": "text",
+                    "value": ". Hãy sử dụng tùy chọn "
+                },
+                {
+                    "type": "bold",
+                    "value": "--staged"
+                },
+                {
+                    "type": "text",
+                    "value": " cùng lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git diff"
+                },
+                {
+                    "type": "text",
+                    "value": "."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Để kiểm tra file chưa được theo dõi, hãy chạy lệnh git status như sau:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git status"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lệnh trên sẽ hiển thị file chưa được theo dõi từ kho lưu trữ. Bây giờ, chúng ta sẽ thêm nó vào staging area. Để thêm file vào staging area, hãy chạy lệnh git add dưới dạng:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git add <file>"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/4.2.2.2.jpg"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bây giờ, file đã được thêm vào staging area, nhưng nó vẫn chưa được commit. Vì thế, chúng ta cũng có thể theo dõi những thay đổi trong staging area. Để kiểm tra thay đổi theo các giai đoạn, hãy chạy lệnh git diff cùng với tùy chọn -staged."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git diff --staged"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lệnh trên sẽ hiển thị các thay đổi của các file đã đưa vào staging area."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/4.2.2.3.jpg",
+            "alt": "git diff --staged"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Đầu ra trên hiển thị các thay đổi của newfile1.txt đã được đưa vào staging area."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Trường hợp 3: Theo dõi các thay đổi sau khi commit một file"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git diff"
+                },
+                {
+                    "type": "text",
+                    "value": " cũng cho phép chúng ta theo dõi những thay đổi sau khi commit một file. Giả sử chúng ta đã commit một file lên repository và thực hiện một số thay đổi về code sau khi commit. Chúng ta hoàn toàn có thể theo dõi file trong giai đoạn này."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong đầu ra bên dưới, ta đã commit những thay đổi mà chúng ta đã thực hiện trên newfile1.txt của mình."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/4.2.3.1.jpg"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sau đó ta sẽ thay đổi một số thứ ở file newfile1.txt. Để theo dõi các thay đổi của file này, hãy chạy lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git diff"
+                },
+                {
+                    "type": "text",
+                    "value": " với đối số "
+                },
+                {
+                    "type": "bold",
+                    "value": "HEAD"
+                },
+                {
+                    "type": "text",
+                    "value": "."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git diff HEAD"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lệnh trên sẽ hiển thị các phần thay đổi, cập nhập của file newfile1.txt trên các phần được đánh dấu."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Trường hợp 4: Theo dõi những thay đổi giữa hai lần commit"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Chúng ta có thể theo dõi những thay đổi giữa hai commit khác nhau. Điều bắt buộc cho việc này là chúng ta phải có một danh sách các commit để chúng ta so sánh. Lệnh để bạn có thể quan sát liệt kê tất cả các commit gần đây là "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git log"
+                },
+                {
+                    "type": "text",
+                    "value": "."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git log"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ví dụ bạn muốn theo dõi thay đổi của một file. Ta sẽ cần các commit của file được chỉ định đó. Lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "git log"
+                },
+                {
+                    "type": "text",
+                    "value": " cho file cụ thể:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git log -p --follow - <Tên file>"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Như vậy là bạn đã có tất cả commit của file newfile1.txt, bạn muốn theo dõi giữa 2 commit, lệnh Git diff cho phép theo dõi những thay đổi giữa 2 lần commit sẽ là:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "git diff <commit1-sha> <commit2-sha>"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lệnh trên sẽ hiển thị các thay đổi giữa 2 lần commit:  "
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/4.2.4.1.jpg"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Trường hợp 5: Theo dõi sự khác biệt giữa 2 branch"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Để có thể xem xét sự khác biệt, thay đổi giữa 2 branch, bạn sẽ sử dụng câu lệnh:"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "git diff <branch A> <branch B>"
+                }
+            ]
+        }
+    ]
+}

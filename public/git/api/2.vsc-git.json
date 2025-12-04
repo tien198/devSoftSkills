@@ -1,0 +1,606 @@
+{
+    "slug": "gioi-thieu-ve-vcs-va-git",
+    "title": "Giới thiệu về Version Control System (VCS) và Git: Khái niệm & Quy trình",
+    "metaDescription": "Tìm hiểu Version Control System (VCS) là gì, tại sao nên dùng Git, kiến trúc 3 trạng thái của Git và quy trình làm việc (workflow) cơ bản cho lập trình viên.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. VCS (Hệ thống quản lý phiên bản)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Khi lập trình, sẽ có lúc bạn lỡ tay xoá một đoạn code vì nghĩ rằng đoạn code đó không phù hợp nữa, nhưng sau đó lại phát hiện là đoạn code đó bạn vẫn cần dùng. Bạn nghĩ mình có thể nhớ lại chính xác những gì mình đã viết không? Thật sự là rất rất khó. Nhưng nếu bạn có dùng phần mềm quản lý phiên bản mã nguồn (Version Control System) thì mọi việc sẽ trở nên đơn giản hơn rất nhiều vì phần mềm này sẽ cho phép bạn dễ dàng quay lại một phiên bản trước của tập tin đó."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Hình ảnh dưới đây minh họa cách mà một vài nhà lập trình quản lý phiên bản thủ công bằng cách copy các file sang một thư mục khác (thư mục được đặt theo thời gian hoặc lượt backup)."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Đây là một phương pháp rất phổ biến ở thời kỳ trước bởi nó đơn giản, tuy nhiên cũng rất dễ gây ra lỗi trong quá trình hoàn thành dự án. Bạn sẽ rất dễ quên rằng mình đang viết code ở thư mục nào hay vô tình sửa, sao chép nhầm file mà bạn không mong muốn. Cuối cùng, trước mắt bạn sẽ là một mớ hỗn độn và bạn không biết phải bắt đầu sửa từ đâu."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/2.1.1.jpg",
+            "alt": "vsc và git",
+            "caption": "coppy file sẽ rất rối, đặc biệt khi ứng dụng phức tạp"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Để giải quyết vấn đề này thì các phiên bản VCS đã ra đời. Với VCS bạn sẽ dễ dàng quản lý thư mục, code của mình và sửa lỗi khi có sự cố. "
+                },
+                {
+                    "type": "bold",
+                    "value": "Version Control System"
+                },
+                {
+                    "type": "text",
+                    "value": " là hệ thống kiểm soát các phiên bản phân tán mã nguồn mở. VCS sẽ lưu trữ tất cả các file trong toàn bộ dự án và ghi lại toàn bộ lịch sử thay đổi của file. Mỗi sự thay đổi sẽ được lưu lại thành một version (phiên bản) hoàn toàn mới. Một trong số những VCS thông dụng nhất là Git."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "VCS có tác dụng:"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "• Lưu lại lịch sử các version của bất kỳ thay đổi nào của dự án, giúp xem lại các sự thay đổi hoặc khôi phục (revert) lại sau này."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "• Việc chia sẻ code trở nên dễ dàng hơn, lập trình viên có thể để public cho bất kỳ ai, hoặc private chỉ cho một số người có thẩm quyền có thể truy cập và lấy code về."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. GIT"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Git là một hệ thống quản lý phiên bản phân tán ("
+                },
+                {
+                    "type": "italic",
+                    "value": "Distributed Version Control System – DVCS"
+                },
+                {
+                    "type": "text",
+                    "value": ") ra đời vào năm 2005 và hiện được dùng rất phổ biến. So với các hệ thống quản lý phiên bản tập trung khi tất cả mã nguồn và lịch sử thay đổi chỉ được lưu một nơi là máy chủ thì trong hệ thống phân tán, các máy khách không chỉ \"check out\" phiên bản mới nhất của các tập tin mà là sao chép (mirror) toàn bộ kho mã nguồn (repository)."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Như vậy, nếu như máy chủ ngừng hoạt động, thì bạn hoàn toàn có thể lấy kho chứa từ bất kỳ máy khách nào để sao chép ngược trở lại máy chủ để khôi phục lại toàn bộ hệ thống. Mỗi checkout thực sự là một bản sao đầy đủ của tất cả dữ liệu của kho chứa từ máy chủ."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/2.2.1.jpg",
+            "alt": "git"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sự khác nhau cơ bản giữa Git với bất kỳ VCS khác là Git coi dữ liệu của nó như một tập hợp các "
+                },
+                {
+                    "type": "bold",
+                    "value": "“ảnh” (snapshot)"
+                },
+                {
+                    "type": "text",
+                    "value": " của một hệ thống tập tin. Mỗi lần bạn thực hiện hành động “commit”, hoặc lưu lại trạng thái hiện tại của dự án trong Git. Về cơ bản, Git “chụp một bức ảnh” ghi lại nội dung của toàn bộ tập tin tại thời điểm đó và tạo ra một tham chiếu. Thậm chí, để không lãng phí tài nguyên, nếu tập tin của bạn không có sự thay đổi nào, Git sẽ không lưu trữ tập tin đó lại một lần nữa mà chỉ tạo một liên kết tới tập tin gốc đã tồn tại trước đó."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Hình ảnh bên dưới minh họa cách mà Git thao tác với dữ liệu (Snapshots):"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/2.2.2.jpg",
+            "alt": "git"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Một số ưu điểm của Git:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Nhanh"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Thiết kế đơn giản"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Hỗ trợ “phát triển phi tuyến tính”"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Phân tán toàn diện"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Có khả năng xử lý các dự án lớn hiệu quả"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Hơn nữa phần lớn các "
+                },
+                {
+                    "type": "bold",
+                    "value": "thao tác của Git diễn ra cục bộ. "
+                },
+                {
+                    "type": "text",
+                    "value": "Bạn hoàn toàn có thể làm việc với Git khi không có kết nối Internet. Bất kể bạn có ngồi trên máy bay hay tàu, bạn hoàn toàn có thể xem lịch sử, viết code, commit bình thường cho tới khi có kết nối Internet để đồng bộ hóa."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "3. GIT FLOW (Quy trình làm việc)"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ba trạng thái của Git"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Đây là điều vô cùng quan trọng về Git nếu bạn muốn sử dụng một cách thành thạo. Mỗi tập tin trong Git được quản lý dựa trên ba trạng thái: "
+                },
+                {
+                    "type": "bold",
+                    "value": "Modified, Staged"
+                },
+                {
+                    "type": "text",
+                    "value": " và "
+                },
+                {
+                    "type": "bold",
+                    "value": "Committed"
+                },
+                {
+                    "type": "text",
+                    "value": "."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "1. Modified (Đã sửa đổi): "
+                },
+                {
+                    "type": "text",
+                    "value": "Đây là trạng thái khi bạn đã thay đổi code, tập tin nhưng chưa commit vào cơ sở dữ liệu. Ví dụ: Bạn chụp một số hình ảnh để đưa vào album nhưng chưa dán nó vào, bạn vẫn có quyền lọc và sửa các bức ảnh."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "2. Staged (Đã tổ chức): "
+                },
+                {
+                    "type": "text",
+                    "value": "Trạng thái này là khi bạn đã đánh dấu sẽ commit phiên bản hiện tại của một tập tin đã chỉnh sửa trong lần commit sắp tới.  các tệp của bạn được chuẩn bị để được cam kết trong kho lưu trữ git (.git repository). Các tệp này chưa được cam kết (commit) nhưng đã ủy quyền cho git để commit phiên bản này trong lần commit tiếp theo."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "3. Committed (Đã cam kết): "
+                },
+                {
+                    "type": "text",
+                    "value": "Đây là trạng thái khi dữ liệu đã được lưu trữ an toàn trong cơ sở dữ liệu (repository). bạn đã lưu thành công các tệp trong kho lưu trữ git (repository) và tạo cam kết (commit) cho chúng. Bạn có thể đặt tên cho commit để bạn hoặc những người trong team có thể hiểu rằng lần commit đó là về vấn đề gì, xử lý việc gì."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Điều này tạo ra 3 phần riêng biệt của một dự án sử dụng Git: thư mục làm việc (working directory), khu vực tổ chức (staging area), git directory (repository):"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/2.3.1.jpg",
+            "alt": "git"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "File Locations (Vị trí lưu trữ)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Đối với các trạng thái khác nhau, vị trí lưu trữ của chúng sẽ khác nhau. Ở phần này, ta sẽ thảo luận về quy trình làm việc hoàn chỉnh dựa trên các trạng thái và vị trí tệp lưu trữ chúng."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Working directory: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Là bản sao một phiên bản của dự án. Những tập tin này được kéo về (pulled) từ cơ sở dữ liệu được nén lại trong thư mục Git và lưu trên ổ cứng cho bạn sử dụng hoặc chỉnh sửa. Hoặc khi bạn tạo bất kỳ thư mục nào trong dự án của mình, thư mục đó sẽ nằm trong thư mục làm việc (working directory) hoặc trong thư mục cục bộ. Về cơ bản, working directory là thư mục cục bộ trên máy tính cá nhân cho các tệp dự án của bạn."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Staging area: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Là một tập tin chứa trong thư mục Git, nó chứa thông tin về những gì sẽ được commit trong lần commit sắp tới."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Git directory (repository): "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Đây là nơi mà các tệp đã ở trạng thái commit nằm. Nó lưu trữ các “siêu dữ kiện” (metadata) và cơ sở dữ liệu cho dự án của bạn. Đồng thời nó là phần được sao lưu về khi bạn tạo một bản sao (clone) của một repository."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tiến trình công việc (Workflow) cơ bản"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Bạn thay đổi các tập tin trong "
+                        },
+                        {
+                            "type": "bold",
+                            "value": "working directory"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Bạn tổ chức các tập tin, tạo mới một ảnh (snapshot) vào "
+                        },
+                        {
+                            "type": "bold",
+                            "value": "Staging area"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Bạn commit, ảnh (snapshot) của các tập tin trong Staging area sẽ được vĩnh viễn vào "
+                        },
+                        {
+                            "type": "bold",
+                            "value": "Git directory (repository)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/2.3.2.jpg",
+            "alt": "git",
+            "caption": "quy trình làm việc (workflow) hoàn chỉnh của Git cùng các câu lệnh tương ứng"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Các câu lệnh cơ bản"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git add: "
+                },
+                {
+                    "type": "text",
+                    "value": "Đưa code, thư mục hiện tại vào Staging Area."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git commit: "
+                },
+                {
+                    "type": "text",
+                    "value": "Cam kết phiên bản trong Staging Area vào Repository."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git push: "
+                },
+                {
+                    "type": "text",
+                    "value": "Đưa code từ Repository cục bộ lên Repository từ xa (Remote)."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git fetch: "
+                },
+                {
+                    "type": "text",
+                    "value": "Nhận các tệp từ Remote Repository về Local Repository nhưng chưa merge vào Working directory."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git merge: "
+                },
+                {
+                    "type": "text",
+                    "value": "Gộp tệp từ Local Repository vào Working directory."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git pull: "
+                },
+                {
+                    "type": "text",
+                    "value": "Kết hợp của Fetch và Merge (Lấy code từ Remote thẳng vào Working directory)."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git diff HEAD: "
+                },
+                {
+                    "type": "text",
+                    "value": "Kiểm tra sự khác biệt giữa Working directory và Local Repository."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git diff: "
+                },
+                {
+                    "type": "text",
+                    "value": "So sánh sự khác biệt giữa Working directory và Staging Area."
+                }
+            ]
+        }
+    ]
+}

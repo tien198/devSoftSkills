@@ -1,0 +1,528 @@
+{
+  "slug": "lam-viec-cung-voi-gitlab",
+  "title": "6. Làm việc cùng với GitLab",
+  "metaDescription": "Hướng dẫn chi tiết các thao tác làm việc với Remote Repository, SSH Key, Git Pull, Merge Request và Git Clone khi sử dụng GitLab.",
+  "author": "Admin",
+  "publishedAt": "2023-11-01",
+  "content": [
+    {
+      "type": "heading2",
+      "children": [
+        {
+          "type": "text",
+          "value": "1. Làm việc với Remote Repository"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Đầu tiên bạn phải hiểu kỹ về Remote Repository là gì?"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Như bạn đã biết thì một trong những mục tiêu chính của sự ra đời Git là giúp cho những lập trình viên làm chung trong một dự án có thể làm việc chung với nhau một cách dễ dàng, tránh xung đột về code, thư mục một cách tối đa nhất. Ở phần này, ta sẽ đi sâu vào các thao tác mà bạn phải thực hiện khi làm việc chung với các lập trình viên khác. Khi bạn làm việc với Git thì hầu hết các thao tác làm việc là ở local (ở máy client) với Local Repository như commit, xem lịch sử, ... "
+        },
+        {
+          "type": "bold",
+          "value": "Khi có nhu cầu chia sẻ, hoặc làm việc nhóm, hoặc đơn giản hơn là làm việc ở nhiều máy (ở văn phòng, ở nhà, …) thì lúc đó bạn sẽ sử dụng đến Remote Repository"
+        },
+        {
+          "type": "text",
+          "value": " - một Repository lưu ở phía Server. Git Server là máy chủ Git cho phép tạo các Repository, GitLab chính là một máy chủ Git, có thể tạo một Repository thì đó chính là Remote Repository. Bạn có thể sao chép (clone) Remote Repository về máy thành Local Repository để làm việc và cập nhật phiên bản mới lên Remote Repository, …"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Dưới đây là sơ đồ mô tả cách mà Local Repository trên máy bạn làm việc với Remote Repository. "
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/git/images/6.1.1.png",
+      "alt": "local respository vs remote respository",
+      "caption": "Local Repository  với Remote Repository"
+    },
+    {
+      "type": "heading2",
+      "children": [
+        {
+          "type": "text",
+          "value": "2. Cài đặt SSH Key cho GitLab với Window"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "SSH là một chương trình tương tác giữa máy chủ và máy khách có sử dụng cơ chế mã hóa đủ mạnh nhằm ngăn các hiện tượng nhìn trộm, ăn cắp thông tin. Sử dụng SSH là biện pháp hữu hiệu để bảo mật dữ liệu trên đường truyền từ hệ thống này đến hệ thống khác."
+        }
+      ]
+    },
+    {
+      "type": "heading3",
+      "children": [
+        {
+          "type": "text",
+          "value": "Ưu điểm:"
+        }
+      ]
+    },
+    {
+      "type": "unordered_list",
+      "children": [
+        {
+          "type": "list_item",
+          "children": [
+            {
+              "type": "text",
+              "value": "Bảo mật các kết nối của máy tính với Server"
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "children": [
+            {
+              "type": "text",
+              "value": "Không phải nhập mật khẩu gitlab mỗi lần pull hoặc push code"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading3",
+      "children": [
+        {
+          "type": "text",
+          "value": "Cơ chế hoạt động:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Bạn sẽ có 2 key: "
+        },
+        {
+          "type": "bold",
+          "value": "public key (khóa công khai)"
+        },
+        {
+          "type": "text",
+          "value": " và "
+        },
+        {
+          "type": "bold",
+          "value": "private key (khóa riêng tư)"
+        },
+        {
+          "type": "text",
+          "value": ". Bạn sẽ gửi public key của mình cho git server (gitlab) của bạn. Sau đó ssh-agent sẽ làm tất cả những việc còn lại. Mỗi lần bạn push hay pull code thì ssh-agent sẽ tự động gửi những thông tin chứng thực. Từ đó gitlab sẽ nhận diện được bạn và sẽ bỏ qua bước bắt bạn nhập mật khẩu. "
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "bold",
+          "value": "Bài đọc: "
+        },
+        {
+          "type": "link",
+          "href": "https://docs.google.com/document/d/12ebcUPO6-nQkTZQl9zV0agsFAV29XX7n/edit",
+          "children": [
+            {
+              "type": "text",
+              "value": " Hướng dẫn tạo SSH Key cho GitLab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading2",
+      "children": [
+        {
+          "type": "text",
+          "value": "3. Làm quen giao diện Web của GitLab"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Chúng ta sẽ dành một chút thời gian để khám phá giao diện web của GitLab vì đó là cách dễ dàng nhất để xem code, thư mục trong một dự án mà không cần clone một bản sao hoàn chỉnh của dự án về máy (Local repository). Có khá nhiều điều mà bạn có thể làm thông qua giao diện web của Gitlab. Đây không phải một hướng dẫn đầy đủ về những gì bạn có thể sử dụng ở giao diện web GitLab nhưng sẽ cho bạn một số ý tưởng về những gì có thể và không thể làm tại đó."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "bold",
+          "value": "Video:"
+        },
+        {
+          "type": "text",
+          "value": " Làm quen với giao diện web của Gitlab"
+        }
+      ]
+    },
+    {
+      "type": "heading2",
+      "children": [
+        {
+          "type": "text",
+          "value": "4. Thực hiện commit thông qua giao diện web GitLab"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Ở phần trước bạn đã biết cách sử dụng git commit để có thể commit một phiên bản dự án mới với Terminal rồi. Tuy nhiên nếu bạn muốn sửa code của mình ngay trên Remote Repository thì có được không? Câu trả lời là có."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Bài giảng này sẽ hướng dẫn bạn cách tạo một commit hoàn toàn mới thông qua giao diện web Gitlab."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "bold",
+          "value": "Video:"
+        },
+        {
+          "type": "text",
+          "value": " Thực hiện commit thông qua giao diện web Gitlab"
+        }
+      ]
+    },
+    {
+      "type": "heading2",
+      "children": [
+        {
+          "type": "text",
+          "value": "5. Lấy các thay đổi từ Remote Repository"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Git pull là lệnh dùng để tải xuống dữ liệu code, thư mục từ một Remote repository và cập nhật Local repository phù hợp với dữ liệu đó. Nói cách khác, "
+        },
+        {
+          "type": "bold",
+          "value": "Git pull"
+        },
+        {
+          "type": "text",
+          "value": " là lệnh kết hợp các thay đổi từ Remote repository vào Local repository."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Về bản chất, Git pull chính là sự kết hợp của 2 lệnh "
+        },
+        {
+          "type": "bold",
+          "value": "Git fetch"
+        },
+        {
+          "type": "text",
+          "value": " và "
+        },
+        {
+          "type": "bold",
+          "value": "Git merge"
+        },
+        {
+          "type": "text",
+          "value": ". Giai đoạn đầu, Git pull sẽ thực thi lệnh Git fetch ở phạm vi nhánh cục bộ mà HEAD được trỏ đến. Khi dữ liệu được tải xuống, Git pull sẽ bắt đầu quy trình hợp nhất như Git merge. Một merge commit mới sẽ được tạo và HEAD cũng được cập nhập để trỏ đến merge commit đó. "
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/git/images/6.5.1.png",
+      "alt": "git pull"
+    },
+    {
+      "type": "heading2",
+      "children": [
+        {
+          "type": "text",
+          "value": "6. Giải quyết xung đột với Remote Repository"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Như đã học ở bài học trước, khi thực hiện merge, Git sẽ tích hợp tự động những chỗ thay đổi. Tuy nhiên, cũng có những trường hợp không thể tích hợp tự động được. Đó là những trường hợp đã thay đổi ở nơi giống nhau trong file trên Remote Repository và Local Repository. Trường hợp này, vì nó không thể tự phán đoán được lấy thay đổi từ bên nào nên sẽ phát sinh lỗi."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Bạn đã được học cách giải quyết xung đột với Local Repository, bài giảng dưới đây sẽ chỉ cho bạn cách giải quyết xung đột này với Remote Repository."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "bold",
+          "value": "Video:"
+        },
+        {
+          "type": "text",
+          "value": " Giải quyết xung đột với Remote Repository"
+        }
+      ]
+    },
+    {
+      "type": "heading2",
+      "children": [
+        {
+          "type": "text",
+          "value": "7. Rebasing khi lấy các thay đổi"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Rebasing là một quy trình để áp dụng lại các commit trên một nhánh nào đó. Nó được sử dụng để áp dụng một chuỗi các commit từ các nhánh khác nhau thành một commit cuối cùng. Về cơ bản, nó là một thay thế của lệnh hợp nhất git, một quá trình hợp nhất tuyến tính. Vậy sẽ thế nào nếu bạn Rebasing khi sử dụng lệnh Pull để lấy các thay đổi từ Remote Repository. "
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Bài giảng này sẽ hướng dẫn bạn khôi phục nhánh cục bộ khi lấy các thay đổi từ Remote Repository."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "bold",
+          "value": "Video:"
+        },
+        {
+          "type": "text",
+          "value": " Rebasing khi lấy các thay đổi"
+        }
+      ]
+    },
+    {
+      "type": "heading2",
+      "children": [
+        {
+          "type": "text",
+          "value": "8. Clone một bản sao dự án từ Remote Repository"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Một khái niệm quan trọng khác mà bạn cần biết là Clone sao chép. Lệnh "
+        },
+        {
+          "type": "bold",
+          "value": "Git clone"
+        },
+        {
+          "type": "text",
+          "value": " được dùng để sao chép, copy một Git Repository về máy tính cá nhân (Local Repository)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Một số trường hợp sử dụng git clone như:"
+        }
+      ]
+    },
+    {
+      "type": "unordered_list",
+      "children": [
+        {
+          "type": "list_item",
+          "children": [
+            {
+              "type": "text",
+              "value": "Sao chép một dự án từ Remote Repository về Local Repository"
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "children": [
+            {
+              "type": "text",
+              "value": "Sao chép một dự án từ một Url (https) (ví dụ: Github, Gitlab)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "bold",
+          "value": "Lưu ý:"
+        },
+        {
+          "type": "text",
+          "value": " Khi sao chép Repo bình thường thì nó tự động tạo ra kết nối đến remote Repo, để có Push, keyes nối này có tên mặc định "
+        },
+        {
+          "type": "bold",
+          "value": "origin"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "bold",
+          "value": "Video:"
+        },
+        {
+          "type": "text",
+          "value": " Clone một bản sao dự án từ Remote Repository"
+        }
+      ]
+    },
+    {
+      "type": "heading2",
+      "children": [
+        {
+          "type": "text",
+          "value": "9. Merge Request"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Trong khi bạn làm việc với Git, việc tạo các branch tách ra để thực hiện công việc, sau đó gộp vào nhánh chính (master) thay vì nhặt từng commit chính là Merge. Trong bài giảng này bạn sẽ học về việc gộp nhánh bằng cách tạo "
+        },
+        {
+          "type": "bold",
+          "value": "Merge Request"
+        },
+        {
+          "type": "text",
+          "value": "."
+        }
+      ]
+    },
+    {
+      "type": "heading3",
+      "children": [
+        {
+          "type": "text",
+          "value": "Ưu điểm:"
+        }
+      ]
+    },
+    {
+      "type": "unordered_list",
+      "children": [
+        {
+          "type": "list_item",
+          "children": [
+            {
+              "type": "text",
+              "value": "Giao diện UI của chức năng Merge Request trên GitLab rất dễ dàng thao tác hơn so với màn hình viết câu lệnh của Terminal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/git/images/6.9.1.png"
+    },
+    {
+      "type": "unordered_list",
+      "children": [
+        {
+          "type": "list_item",
+          "children": [
+            {
+              "type": "text",
+              "value": "Hơn nữa khi một tính năng, code được thêm vào thông qua Merge Request bạn sẽ nhìn thấy các phần code đã chỉnh sửa. Điều này là vô cùng quan trọng. Nếu bạn quan sát từng commit riêng lẻ thì rất khó để nắm được tổng thể những gì đã cập nhật cho một tính năng. Với Merge Request thì bạn nhìn thấy rất rõ ràng và có thể dễ dàng ra quyết định phần nào là cần thiết hay không cần thiết."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

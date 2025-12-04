@@ -1,0 +1,499 @@
+{
+    "slug": "cac-cau-lenh-git-co-ban",
+    "title": "Các câu lệnh Git cơ bản: Repository, Commit, Staging và Branch",
+    "metaDescription": "Hướng dẫn chi tiết về các lệnh Git cơ bản: tạo Git repository, Git commit, Git staging, xóa file, .gitignore và làm việc với Git Branch.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. Git repository"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong một dự án thực tế, bạn sẽ viết code chung với Team của mình. Khi đó việc theo dõi các thay đổi, xem ai đã thực hiện phần code đó và có thể lấy lại phần code trước khi thay đổi là vô cùng quan trọng. Tuyệt vời thay một "
+                },
+                {
+                    "type": "bold",
+                    "value": "repository Git"
+                },
+                {
+                    "type": "text",
+                    "value": " là tất cả những gì bạn cần."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Một "
+                },
+                {
+                    "type": "bold",
+                    "value": "repository Git"
+                },
+                {
+                    "type": "text",
+                    "value": " là một lưu trữ ảo của dự án của bạn. Nó cho phép bạn lưu các phiên bản code trong dự án của mình và bạn có thể truy cập khi cần. Bài giảng dưới đây sẽ giải thích cho bạn cơ chế hoạt động của repository và cách tạo một repository Git, xác định cấu hình."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. GIT COMMIT"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git commit"
+                },
+                {
+                    "type": "text",
+                    "value": " là lệnh cam kết trong Git, được dùng để lưu lại những thay đổi trong repository. Có thể hiểu rằng nó như một ảnh chụp nhanh (snapshot). Các ảnh snapshot đã cam kết (commit) được coi là một phiên bản code “an toàn” của dự án vì Git luôn hỏi mỗi khi có người muốn thay đổi chúng."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Hãy nhớ rằng, trước khi bắt đầu lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git Commit"
+                },
+                {
+                    "type": "text",
+                    "value": ", lệnh "
+                },
+                {
+                    "type": "bold",
+                    "value": "Git Add"
+                },
+                {
+                    "type": "text",
+                    "value": " sẽ được chạy để thúc đẩy các thay đổi của dự án mà sau đó nó sẽ được lưu trữ trong một cam kết."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tóm lại, Commit là những bức ảnh chụp nhanh của dự án. Mọi commit đều được ghi lại trong nhánh chính của repository. Hai commit khác nhau sẽ không bao giờ ghi đè vì mỗi commit đều có ID riêng."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Câu lệnh mẫu:"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git add readme.md"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git commit –m “first commit”"
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "3. GIT STAGING"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Như ta đã biết ở phần trước thì Git đã có 3 khu làm việc chính: trên máy tính cá nhân, trên kho chứa mã nguồn ("
+                },
+                {
+                    "type": "bold",
+                    "value": "repository"
+                },
+                {
+                    "type": "text",
+                    "value": ") và khu vực trung gian ("
+                },
+                {
+                    "type": "bold",
+                    "value": "staging area"
+                },
+                {
+                    "type": "text",
+                    "value": "). "
+                },
+                {
+                    "type": "bold",
+                    "value": "Staging area"
+                },
+                {
+                    "type": "text",
+                    "value": " là khu vực sẽ lưu trữ những thay đổi của bạn trên file để nó có thể commit được, vì muốn commit được thì tệp tin của bạn phải nằm trong "
+                },
+                {
+                    "type": "bold",
+                    "value": "Staging area"
+                },
+                {
+                    "type": "text",
+                    "value": "."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bạn sẽ dùng 2 lệnh sau để lưu trữ tất cả những thay đổi trên file vào "
+                },
+                {
+                    "type": "bold",
+                    "value": "Staging area"
+                },
+                {
+                    "type": "text",
+                    "value": ":"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "git add –all"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "git add <tên file>"
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "4. Commit một thư mục"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Có một trường hợp nữa về các commit mà bạn cần lưu ý là khi bạn tạo một folder mới rồi sau đó kiểm tra bằng lệnh “Git status” thì bạn sẽ nhận được thông báo như sau:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/git/images/3.4.1.jpg",
+            "alt": "git"
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lý do cho thông báo này là Git chỉ theo dõi các "
+                },
+                {
+                    "type": "bold",
+                    "value": "tệp tin (File)"
+                },
+                {
+                    "type": "text",
+                    "value": " chứ không theo dõi "
+                },
+                {
+                    "type": "bold",
+                    "value": "thư mục (Folder)"
+                },
+                {
+                    "type": "text",
+                    "value": ". Tuy nhiên, nếu các thư mục của bạn có chứa tệp tin hay một nội dung bất kỳ thì nó vẫn sẽ được Git theo dõi."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Nếu bạn muốn Git theo dõi một Folder dù nó không chứa bất kỳ nội dung nào, bạn có thể sử dụng cách sau: Chèn một tệp trống có tên bắt đầu với dấu chấm (Ví dụ: "
+                },
+                {
+                    "type": "bold",
+                    "value": ".gitkeep"
+                },
+                {
+                    "type": "text",
+                    "value": ")."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "touch temp/.gitkeep"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bằng cách này thì sau khi bạn kiểm tra bằng "
+                },
+                {
+                    "type": "bold",
+                    "value": "git status"
+                },
+                {
+                    "type": "text",
+                    "value": " bạn sẽ thấy Git đã theo dõi file temp này dù rằng nó không có nội dung."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "5. Xóa File"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Xóa file trên máy tính cá nhân thì đơn giản, nhưng nếu bạn đã commit nó lên repository rồi thì sẽ phải làm thế nào? Bài giảng này sẽ chỉ cho bạn câu lệnh để trả lời câu hỏi đó."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "[Video: Xóa File]"
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "6. Tệp tin .gitignore"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Gitignore"
+                },
+                {
+                    "type": "text",
+                    "value": " là file có tên là "
+                },
+                {
+                    "type": "bold",
+                    "value": ".gitignore"
+                },
+                {
+                    "type": "text",
+                    "value": " do Git quy định. Nhiệm vụ của nó là liệt kê nhũng file tồn tại nhưng bạn không mong muốn cho vào git repository (repository git). Git sẽ bỏ qua mà không commit những file đã được ghi trong "
+                },
+                {
+                    "type": "bold",
+                    "value": ".gitignore"
+                },
+                {
+                    "type": "text",
+                    "value": "."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Cách thức hoạt động của Gitignore"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Git sẽ bỏ qua file hoặc một tập các file bạn thấy không cần thiết trong dự án, ví dụ:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các file mà IDE tự sinh ra trong quy trình khởi tạo project (tránh gây tốn tài nguyên server)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các file cấu hình đường dẫn trên máy tính cá nhân người viết code (tránh lỗi khi chạy ở máy các thành viên khác)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các file cần giữ kín trong nội bộ nếu repository của bạn ở chế độ public (bảo mật)."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Git quản lý các file mà bạn muốn không commit bằng file "
+                },
+                {
+                    "type": "bold",
+                    "value": ".gitignore"
+                },
+                {
+                    "type": "text",
+                    "value": " được đặt trong thư mục gốc (root)."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "[Video: Tệp .gitignore]"
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "7. GIT Branches"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Branch"
+                },
+                {
+                    "type": "text",
+                    "value": " là một bản sao của một project Git mà tại đó bạn có thể thay đổi bất cứ khi nào và sau đó kết hợp với project gốc. Các hoạt động trên mỗi branch là riêng biệt, không gây bất kỳ ảnh hưởng nào đến các branch khác nên có thể tiến hành nhiều thay đổi đồng thời trên một repository."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bạn sẽ tạo một nhánh (branch) mới với câu lệnh:"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Git checkout -b “tên branch”"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,328 @@
+{
+    "slug": "tim-hieu-ve-readme",
+    "title": "README là gì? Hướng dẫn viết tệp README chuẩn cho dự án",
+    "metaDescription": "Tìm hiểu README là gì, các thành phần cần có, cách làm nổi bật và các công cụ hỗ trợ viết README hiệu quả cho dự án của bạn.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. README là gì?"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "README là một tệp văn bản ("
+                },
+                {
+                    "type": "italic",
+                    "value": ".txt"
+                },
+                {
+                    "type": "text",
+                    "value": " hoặc "
+                },
+                {
+                    "type": "italic",
+                    "value": ".md"
+                },
+                {
+                    "type": "text",
+                    "value": ") hoạt động như tài liệu cho một dự án hoặc thư mục. Nó thường là phần documentation và landing page dễ thấy nhất cho hầu hết các dự án nguồn mở. Ngay cả tên tệp README cũng được viết hoa toàn bộ để thu hút sự chú ý của người đọc và đảm bảo đó là điều đầu tiên người dùng đọc."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. README nên bao gồm những gì?"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Viết một tệp README cần có bố cục rõ ràng và mạch lạc, điều đó đôi khi còn phụ thuộc vào khả năng và tính thẩm mỹ của mỗi người."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Dưới đây là một số điều cần thiết khi bạn viết README của mình:"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Title (Tiêu đề):"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Đừng quên đặt tên cho dự án của bạn hoặc làm nổi bật tên. Có một số dự án đáng ngạc nhiên trên GitHub không có tên."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Introduction (Giới thiệu - README nói về cái gì và tại sao bạn viết nó):"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Viết một đoạn giới thiệu ngắn hai hoặc ba dòng giải thích dự án của bạn làm gì và dự án đó dành cho ai. Ngoài ra, hãy bỏ các tiêu đề như 'Giới thiệu', 'Tóm tắt' hoặc 'Tổng quan' vì hãy nhớ rằng đây là phần giới thiệu."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Technologies Used (Công nghệ được sử dụng - thư viện, phiên bản…)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ngay sau phần giới thiệu của bạn, hãy thêm một phần có tiêu đề liệt kê bất kỳ kiến thức hoặc công cụ tiên quyết nào mà bất kỳ ai muốn sử dụng dự án có thể cần trước khi bắt đầu. Ví dụ: nếu nó chạy trên phiên bản Python mới nhất, hãy bảo họ cài đặt Python ở version đó."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Install (Cài đặt thế nào?)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Hãy cung cấp cho người dùng các bước thật chi tiết để có thể cài đặt chương trình (Đảm bảo chia phần cài đặt thành các bước được đánh số nếu nó yêu cầu nhiều bước)"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Use (Cách sử dụng)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Thêm các bước để sử dụng dự án khi người dùng đã cài đặt nó. Đảm bảo bao gồm các ví dụ sử dụng và tham chiếu giải thích các tùy chọn lệnh hoặc flag nếu bạn nghĩ rằng chúng sẽ hữu ích. Nếu bạn có tài liệu nâng cao hơn trong một tệp hoặc trang web riêng biệt, hãy gán link đến tài liệu đó ở cuối."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Contribute (Làm thế nào để đóng góp)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Cung cấp các bước để đóng góp cho dự án. Ngoài ra, bạn có thể muốn tạo hướng dẫn cho các người dùng muốn đóng góp trong một tệp riêng và liên kết với hướng dẫn này từ README của bạn nếu bạn muốn mọi người đọc nó trước khi đóng góp pull request cho dự án."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Contributors (Tác giả)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Điền tên bất kỳ người đồng hành nào đã có nhiều đóng góp cho dự án vào mục tác giả. Đó là một cách hay để làm cho dự án nguồn mở được thể hiện như một nỗ lực của cả nhóm và thừa nhận sự đóng góp của tất cả những người đã dành thời gian để hoàn thành dự án."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Contact (Thông tin liên lạc)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Nếu ai đó có thắc mắc, muốn cộng tác với bạn hoặc đủ ấn tượng với dự án của bạn để cung cấp cho bạn cơ hội việc làm tốt hơn, hãy viết thông tin liên lạc của bạn một cách rõ ràng và mạch lạc."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trên đây là các thông tin quan trọng mà bạn cần đưa vào mục README của dự án."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "3. Làm cho README của dự án đặc sắc hơn."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ngoài ra nếu bạn muốn phần README dự án của bạn trông thật nổi bật, bạn có thể thêm các mục sau:"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Thêm logo:"
+                },
+                {
+                    "type": "text",
+                    "value": " Nếu dự án của bạn có logo, hãy thêm biểu tượng này ở đầu README của bạn. Thương hiệu làm cho một dự án trông chuyên nghiệp hơn và giúp mọi người ghi nhớ nó."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Thêm badges và shields:"
+                },
+                {
+                    "type": "text",
+                    "value": " Bạn có thể thêm badges và shields để phản ánh tình trạng hiện tại của dự án, giấy phép mà nó sử dụng và nếu có bất kỳ sự phụ thuộc nào mà nó sử dụng là cập nhật. Bạn có thể tìm thấy một loạt các badges ở "
+                },
+                {
+                    "type": "link",
+                    "href": "https://shields.io/",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Shields.io"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "value": "."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Thêm ảnh chụp màn hình:"
+                },
+                {
+                    "type": "text",
+                    "value": " Đôi khi một ảnh chụp màn hình đơn giản hoặc một bộ ảnh chụp màn hình có thể giúp bạn đỡ phải ngồi gõ vài chục dòng mô tả. Tuy nhiên, nếu bạn sử dụng ảnh chụp màn hình, bạn sẽ cần cập nhập chúng mỗi khi bạn cập nhật phiên bản mới của dự án."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "4. Công cụ hỗ trợ và 1 vài dự án trên github có thể tham khảo phần README"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Công cụ:"
+                },
+                {
+                    "type": "text",
+                    "value": " Có 1 công cụ có thể giúp các bạn trình bày được phần README một cách bài bản và có hệ thống, nó có tên là "
+                },
+                {
+                    "type": "link",
+                    "href": "https://readme.so/",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "readme.so"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "value": ". Đây là công cụ hỗ trợ bạn tạo một tệp README với đầy đủ các đầu mục, bạn có thể trải nghiểm trực trên website hoặc tham khảo những đầu mục công cụ cung cấp để tự tạo tệp README của riêng mình."
+                }
+            ]
+        }
+    ]
+}
