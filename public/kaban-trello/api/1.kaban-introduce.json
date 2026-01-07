@@ -1,0 +1,104 @@
+{
+    "slug": "gioi-thieu-ve-kanban",
+    "title": "Giới thiệu về Kanban",
+    "metaDescription": "Tổng quan về Kanban, nguồn gốc, ứng dụng và bốn nguyên tắc cốt lõi của phương pháp quản trị công việc Kanban.",
+    "content": [
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong mỗi doanh nghiệp để có thể vận hành và phát triển tốt đều cần có một hệ thống hay quy trình quản lý công việc khác nhau sao cho phù hợp với đặc điểm của doanh nghiệp. Bây giờ, chúng ta sẽ tìm hiểu các khái niệm và ứng dụng của một mô hình quản trị hay một phương pháp nổi tiếng và thành công được nhiều công ty áp dụng, đó chính là Kanban."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video cung cấp một phần giới thiệu về Kanban, một phương pháp Agile tập trung vào việc mang lại giá trị sớm và xây dựng các nhóm làm việc cộng tác, tự quản lý. Kanban có nguồn gốc từ Toyota vào những năm 1940 và ngày nay chủ yếu được sử dụng trong phát triển phần mềm nhằm nâng cao giá trị của dự án."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Dưới đây là bốn nguyên tắc cơ bản của Kanban được trình bày trong video:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Bắt đầu với những gì bạn đang làm hiện tại: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Các tổ chức có thể áp dụng Kanban mà không cần thay đổi hoàn toàn quy trình hiện tại, từ đó tạo ra sự linh hoạt và dễ dàng thích nghi với luồng công việc đang có."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Đồng thuận theo đuổi sự thay đổi theo từng bước nhỏ: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Nhấn mạnh vào việc mang lại giá trị qua các phần nhỏ, giúp giảm thiểu lãng phí và tối đa hóa giá trị cho các bên liên quan theo thời gian."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Tôn trọng quy trình, vai trò, trách nhiệm và chức danh hiện tại: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Việc áp dụng Kanban không đòi hỏi thay đổi cấu trúc tổ chức; các vai trò hiện có vẫn có thể duy trì trong khi vẫn tận dụng được lợi ích từ phương pháp này."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Lãnh đạo ở mọi cấp độ: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Khuyến khích sự phát triển của các nhóm tự quản lý, chịu trách nhiệm cho công việc của mình, đồng thời thúc đẩy tinh thần hợp tác và giải quyết vấn đề tập thể giữa các thành viên."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Từ khóa tham khảo: "
+                },
+                {
+                    "type": "text",
+                    "value": "Kaban board, kaban card."
+                }
+            ]
+        }
+    ]
+}

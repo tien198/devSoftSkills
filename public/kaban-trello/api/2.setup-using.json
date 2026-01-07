@@ -1,0 +1,228 @@
+{
+    "slug": "cach-thiet-lap-va-su-dung-kanban-trello",
+    "title": "Cách thiết lập & sử dụng Kanban, Trello",
+    "metaDescription": "Hướng dẫn cách thiết lập và sử dụng Kanban, giới thiệu 6 ứng dụng thực tế của Kanban và cách quản lý công việc hiệu quả với Trello.",
+    "content": [
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "6 ứng dụng thực tế của Kanban"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài giảng này trình bày sáu thực hành chung của Kanban giúp quản lý hiệu quả luồng công việc trong các nhóm:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Hình dung luồng công việc: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Sử dụng bảng Kanban—dưới dạng vật lý hoặc kỹ thuật số—giúp các nhóm dễ dàng theo dõi trạng thái của các nhiệm vụ và phát hiện các điểm tắc nghẽn trong quy trình."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Giới hạn công việc đang thực hiện (WIP): "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Thực hành này khuyến khích nhóm tập trung vào việc hoàn thành nhiệm vụ thay vì bắt đầu quá nhiều việc cùng lúc, theo tinh thần “ngừng bắt đầu, bắt đầu hoàn thành.”"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Quản lý luồng công việc: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Đảm bảo các nhiệm vụ di chuyển trơn tru qua các trạng thái mà không bị trì hoãn là điều quan trọng để duy trì hiệu suất làm việc."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Làm rõ chính sách: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Các nhóm nên xác định và ghi lại quy trình cùng các quy tắc liên quan đến việc di chuyển nhiệm vụ trong hệ thống Kanban, nhằm đảm bảo tính nhất quán trong cách xử lý công việc."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Áp dụng vòng phản hồi: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Thường xuyên tổ chức các buổi họp ngắn hàng ngày và họp hồi tưởng giúp nhóm thảo luận tiến độ và giải quyết vấn đề để cải tiến liên tục, ngay cả khi không sử dụng các vòng lặp cố định."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Hợp tác để cải tiến: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Khuyến khích tinh thần làm việc nhóm và trao đổi cởi mở về việc quản lý nhiệm vụ giúp các nhóm học hỏi từ trải nghiệm và điều chỉnh phương pháp để đạt kết quả tốt hơn."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: 6 ứng dụng thực tế của Kanban"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: Key Metrics"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sử dụng Kanban và quản lý nhiệm vụ với Trello"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Như đã nói ở phần trước, các bạn có thể dùng bảng hoặc giấy để ứng dụng phương pháp Kanban."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/kaban-trello/images/2.1.jpg",
+            "alt": "Kaban",
+            "caption": ""
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tuy nhiên, việc dùng giấy hay bảng có bất tiện là khó mang theo bên cạnh mọi lúc mọi nơi hay chia sẻ cho bạn bè trực tuyến. Do vậy chúng ta sẽ sử dụng Trello – một phần mềm được thiết kế dựa trên Kanban."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Nói đơn giản, Trello là một ứng dụng miễn phí cho phép chúng ta quản lý mọi thứ dưới dạng bảng, danh sách và thẻ. Ngoài ra, Trello còn cho phép kết nối với Google Drive, Dropbox để lấy file checklist, thiết lập lịch, ..."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/kaban-trello/images/2.2.jpg",
+            "alt": "Kaban",
+            "caption": ""
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài giảng này trình bày một phần minh họa về Trello, một công cụ bảng Kanban kỹ thuật số phổ biến, rất phù hợp để quản lý cả công việc cá nhân lẫn chuyên môn."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Diễn giả so sánh Trello với Jira, nhấn mạnh rằng Trello là công cụ miễn phí dành cho người dùng cá nhân và cho phép tạo bảng và thẻ không giới hạn, trong khi Jira là công cụ cao cấp thường được các tổ chức lớn ưa chuộng."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Phần trình diễn hướng dẫn cách thiết lập một bảng Kanban trên Trello với các danh sách: Cần làm (To Do), Đang làm (Doing) và Đã xong (Done). Người dùng có thể tạo thẻ cho từng nhiệm vụ, thêm mô tả, bình luận, tệp đính kèm, ngày đến hạn và phân công thành viên."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Một tính năng nổi bật của Trello là khả năng đính kèm hình ảnh và tài liệu vào các thẻ, giúp tổ chức công việc trực quan hơn và quản lý nhiệm vụ hiệu quả hơn."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tổng thể, bài giảng nhấn mạnh sự đơn giản và hiệu quả của việc sử dụng bảng Kanban kỹ thuật số như Trello trong việc hình dung và ưu tiên các nhiệm vụ."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: Sử dụng Kanban và quản lý nhiệm vụ với Trello"
+                }
+            ]
+        }
+    ]
+}

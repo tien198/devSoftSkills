@@ -10,6 +10,12 @@ export default function Home() {
       >
         Git
       </Link>
+      <Link
+        to="/kaban-trello"
+        className="text-blue-400 hover:underline hover:text-blue-300"
+      >
+        Kaban Trello
+      </Link>
     </div>
   );
 }
