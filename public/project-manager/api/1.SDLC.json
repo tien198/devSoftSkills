@@ -1,0 +1,349 @@
+{
+    "slug": "gioi-thieu-sdlc-software-development-life-cycle",
+    "title": "Giới thiệu về SDLC – Software Development Life Cycle",
+    "metaDescription": "Tổng quan về SDLC, lý do cần học SDLC, mô hình Waterfall và các biến thể hiện đại trong phát triển phần mềm.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. Tại sao cần học và hiểu về SDLC?"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Kỹ thuật phần mềm là một trong những điều phức tạp nhất mà con người từng làm, và bao gồm tất cả các loại kỹ thuật khác. Tại sao chúng lại phức tạp đến như vậy?"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Chúng ta không thể nhìn thấy khi nào chúng ta phạm sai lầm."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Thật khó để thấy chắc chắn rằng nó không hoạt động đúng đắn, đặc biệt là ở quy mô lớn."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Bất cứ điều gì chúng ta làm để giúp chúng ta thấy rằng nó đang hoạt động đúng, có thể là sai. Nếu chương trình sai và kiểm thử sai, chúng ta thậm chí không biết có vấn đề gì."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "=> Chúng ta nên tìm hiểu về quy trình phát triển phần mềm và thực thi theo nó."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Qua số liệu dưới đây, chúng ta có thể thấy rằng có đến tận 19% các dự án phần mềm đã thất bại – với số tiền khoảng 81 tỉ USD được chi cho các dự án này:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/project-manager/images/1.1.1.jpg",
+            "alt": "SDLC",
+            "caption": ""
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Vì vậy, tìm hiểu về quy trình phần mềm và các phương pháp luận để có thể thực hiện nó một cách đúng đắn là rất quan trọng."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/why-take-this-course-3TI3R",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Giới thiệu"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. Quy trình SDLC gắn liền với mô hình Waterfall"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Vòng đời phát triển phần mềm điển hình phác thảo cho chúng ta cách tạo một phần nhỏ của phần mềm, bao gồm các công đoạn khởi đầu, tạo dựng và bảo trì. Mô hình này khá tổng quát, tức là nó chỉ đề cập vòng đời trên phạm vi rộng. Mỗi phạm vi lại được mở rộng để xác định quy trình một cách cụ thể hơn."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Vòng đời không nhất thiết phải hoàn thành theo thứ tự. Có nhiều cách khác nhau để hoàn thiện từng tác vụ, tùy thuộc vào từng vấn đề cụ thể mà mỗi cách lại có những lợi thế khác nhau."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Chúng ta cùng xem xét qua mô hình phát triển phần mềm Waterfall (mô hình thác nước). Các bước của vòng đời phát triển phần mềm Waterfall:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Thu thập và phân tích yêu cầu (Requirement)"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Ở bước này, chúng ta cần xác định vấn đề cụ thể, thu thập ý tưởng và mô tả, diễn giải thực tế, cụ thể hơn. Ví dụ: nếu định tạo một website, chúng ta cần liệt kê các yêu cầu và hoạt động của website đó."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Thiết kế (Design)"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Sau khi đã khai thác chi tiết vấn đề, hãy tìm cách để xử lý vấn đề đó. Ở bước thiết kế, chúng ta cần lên kế hoạch về cách tạo ra một product đáp ứng các tiêu chí, yêu cầu đã đặt ra."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Thực hiện (Implementation)"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Đây chính là bước chúng ta thực sự viết code và xây dựng giải pháp theo các ý đã thiết lập ở bước thiết kế."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Xác minh (Verification)"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Bước này sẽ kiểm tra xem giải pháp đã xây có thực sự xử lý được vấn đề không. Chúng ta sẽ kiểm thử thành phẩm, tìm bug và điều chỉnh những thứ còn sai sót."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Vận hành và Bảo trì (Maintenance)"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Sau bước kiểm nghiệm, chúng ta sẽ phát hành product. Từ thời điểm này, chúng ta bắt đầu giai đoạn bảo trì product. Product sẽ xuất hiện bug và cần triển khai các tính năng mới. Bước này có thể sẽ diễn ra vô thời hạn."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/project-manager/images/1.2.1.png",
+            "alt": "SDLC",
+            "caption": ""
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Một số khó khăn có khả năng cao sẽ gặp phải trong các giai đoạn phát triển phần mềm:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Rất khó để dự đoán các yêu cầu trong một hoặc hai năm tới, khi thị trường thay đổi, hoặc đôi khi nó thực sự khó dự đoán những gì người dùng sẽ thích hay không thích."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Có thể là các nhà phát triển hoặc các kiến trúc sư đã hiểu sai các yêu cầu và sau chu kỳ một hoặc hai năm, các lỗi sai này mới được phát hiện ra."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Vấn đề tích hợp xảy ra lỗi (thường là dependencies) sau thời gian vận hành nhất định"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "=> Vì vậy, khi các vấn đề này xảy ra, các biến thể cho Waterfall bắt đầu xuất hiện như: V-model, Sashimi, RUP, Incremental, Agile (Scrum, Kanban và XP). Ý tưởng cơ bản đằng sau tất cả các mô hình này là xây dựng theo chu kỳ ngắn hơn để có thể điều chỉnh phần mềm nhanh chóng theo yêu cầu và học hỏi từ thị hiếu người dùng."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Để có thể thay đổi nhanh hơn, ngoài việc sử dụng các mô hình mới chúng ta cũng có một số phương pháp khác như:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Tích hợp liên tục"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Kiểm thử tự động"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Triển khai tự động"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "=> Những phương pháp này dẫn đến sự phát triển của DevOps – một chuyên ngành mới nổi và đang dần phát triển mạnh trong thời gian gần đây."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ngoài ra, trong các chu kỳ ngắn hơn thì các khái niệm như Lean Startup và Design Thinking đã trở thành trending – chúng giúp bạn thực thi các chu kỳ một cách tiết kiệm, tối ưu và hiệu quả nhất."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/what-software-development-looks-like-wZprO",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Quy trình xây dựng phần mềm"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

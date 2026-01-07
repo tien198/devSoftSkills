@@ -9,6 +9,8 @@ import Home from "./pages/home/Home";
 import GitLayout from "./pages/git/Layout";
 import KabanTrello from "./pages/kaban-trello/KabanTrello";
 import KabanTrelloLayout from "./pages/kaban-trello/Layout";
+import ProjectManagerLayout from "./pages/project-manager/Layout";
+import PM from "./pages/project-manager/PM";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,28 @@ const router = createBrowserRouter([
             element: <KabanTrello />,
             loader: (args) =>
               import("./pages/kaban-trello/loader").then((mod) =>
+                mod.loader(args)
+              ),
+          },
+        ],
+      },
+      {
+        path: "project-manager",
+        element: <ProjectManagerLayout />,
+        children: [
+          {
+            index: true,
+            element: (
+              <div className="flex justify-center items-center mt-15 text-2xl">
+                Select an item above to see details !
+              </div>
+            ),
+          },
+          {
+            path: ":id",
+            element: <PM />,
+            loader: (args) =>
+              import("./pages/project-manager/loader").then((mod) =>
                 mod.loader(args)
               ),
           },

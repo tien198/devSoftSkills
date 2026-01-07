@@ -16,6 +16,12 @@ export default function Home() {
       >
         Kaban Trello
       </Link>
+      <Link
+        to="/project-manager"
+        className="text-blue-400 hover:underline hover:text-blue-300"
+      >
+        Project Manager
+      </Link>
     </div>
   );
 }

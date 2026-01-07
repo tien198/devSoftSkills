@@ -1,0 +1,403 @@
+{
+    "slug": "yeu-cau-phan-mem",
+    "title": "Yêu cầu phần mềm",
+    "metaDescription": "Tổng quan về yêu cầu phần mềm, SRS, phân biệt requirement và specification, cũng như functional và non-functional requirement.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. Định nghĩa yêu cầu"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Requirement "
+                },
+                {
+                    "type": "text",
+                    "value": "(Yêu cầu) giúp xác định vấn đề. Ở bước này, chúng ta sẽ cố gắng "
+                },
+                {
+                    "type": "bold",
+                    "value": "tìm ra các vấn đề "
+                },
+                {
+                    "type": "text",
+                    "value": "cần xử lý, "
+                },
+                {
+                    "type": "bold",
+                    "value": "KHÔNG tìm phương pháp. "
+                },
+                {
+                    "type": "text",
+                    "value": "Điều này có nghĩa là chúng ta cần xây dựng các mục tiêu mà hệ thống có thể thực hiện, chứ không tìm ra cách để đạt được các mục tiêu đã đề ra."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Giả dụ chúng ta đang cần một biểu mẫu để theo dõi các giao dịch tài chính. Về mặt yêu cầu, chúng ta cần xác định biểu mẫu này sẽ theo dõi những gì, có thể là trường tên, ngày tháng và tài khoản ngân hàng. Do đó, dữ liệu cần được lưu trữ trong database. Đây chính là các yêu cầu cho biểu mẫu này, bạn không cần tìm ra phương pháp thực hiện tốt nhất ở giai đoạn này, hãy để nó cho giai đoạn thiết kế."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Xin nhắc lại là các yêu cầu chỉ giúp hoạch định vấn đề. Ở giai đoạn này, chúng ta chỉ đưa ra một bộ mục tiêu chung cần hướng tới. Các yêu cầu này sẽ được cân nhắc liên tục trong quá trình sản xuất để đảm bảo product đang được tạo ra giải quyết được vấn đề ban đầu."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "SRS "
+                },
+                {
+                    "type": "text",
+                    "value": "(Software Requirement Specification – tài liệu đặc tả yêu cầu) là một tài liệu quan trọng trong công việc phát triển phần mềm, bởi nó bao gồm những vai trò sau:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Giúp các đội phát triển xây dựng hệ thống chính xác, mô tả được hết chức năng, tránh đi lạc hướng với yêu cầu của khách hàng."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Tránh gặp phải các trường hợp có quá nhiều ý kiến và giúp cho các bên liên quan hiểu về hệ thống một cách rõ ràng."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Giúp cho việc bảo trì và nâng cao các chức năng của hệ thống một cách dễ dàng và nhanh chóng."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Giúp các chuyên viên kiểm thử hệ thống hiểu được dễ dàng từ đó có thể xây dựng chi tiết các kịch bản kiểm thử."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tại sao chúng ta cần xây dựng yêu cầu? Trong bảng dưới đây, chúng ta có thể thấy rằng nếu dành 20% thời gian cho việc xây dựng các yêu cầu của dự án, chi phí vượt mức kế hoạch của dự án chỉ ở mức 40% - giảm 5 lần so với việc không dành thời gian cho xây dựng yêu cầu."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/project-manager/images/2.1.1.png",
+            "alt": "SDLC",
+            "caption": ""
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/why-do-we-need-requirements-pRHmY",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Yêu cầu phần mềm"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. Phân biệt yêu cầu và đặc tả"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong giai đoạn requirement, chúng ta cũng xem xét specification (đặc tả), về bản chất đây là các \"yêu cầu về mặt kỹ thuật\". Chúng giúp xác định vấn đề theo các ràng buộc kỹ thuật."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Các ràng buộc ở đây là những giới hạn hoặc những triển khai phải xảy ra. Ví dụ: nếu client chỉ sử dụng MySQL database thì chúng ta cũng phải sử dụng MySQL database. Đây không phải là lựa chọn về mặt thiết kế mà là điều buộc phải xảy ra, do đó nó thuộc phạm vi của yêu cầu."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Requirement"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Là định nghĩa phi kỹ thuật về những thứ mà hệ thống yêu cầu."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Specification"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Là định nghĩa kỹ thuật về những thứ mà hệ thống yêu cầu."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Với requirement, chúng ta đang cố gắng giữ cho mọi thứ đơn giản. Chúng ta không cần phải sử dụng bất kỳ biệt ngữ kỹ thuật nào, và mọi người đều hiểu được, chẳng hạn như \"Should record bank account information\"."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Với specification, chúng ta cần giữ mọi thứ chính xác hơn và sử dụng một số biệt ngữ kỹ thuật, ví dụ: \"Encrypt the bank account information with at-least a AES 256 standard\". Chúng ta không thiết kế chi tiết ở giai đoạn này mà chỉ đề cập tiêu chuẩn kỹ thuật cần đáp ứng."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/requirements-vs-specification-8ghDF",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Requirements và Specification"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "3. Functional và Non-Functional"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Phạm vi cuối cùng mà chúng ta thêm vào các requirement là ý tưởng về functional requirement (yêu cầu chức năng) và non-functional requirement (yêu cầu phi chức năng)."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Functional"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Các yêu cầu liên quan đến chức năng của hệ thống."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Non-Functional"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Các yêu cầu không ảnh hưởng trực tiếp tới chức năng của chương trình."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Functional requirement khá đơn giản và dễ tạo, chỉ cần trả lời câu hỏi \"chương trình sẽ làm gì\"."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ví dụ: hệ thống sẽ thu thập thông tin người dùng, cung cấp hệ thống giỏ hàng, cho phép xếp hạng và đánh giá các product. Đây đều là các functional requirement."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Non-functional requirement sẽ phức tạp hơn một chút. Chúng thường là những ràng buộc từ chính phủ (quy định về an toàn), công ty (quy định về chất lượng) hoặc khách hàng. Đây là những thứ chúng ta phải tuân theo, nhưng không liên quan trực tiếp đến chức năng của chương trình."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ví dụ: non-functional requirement là chương trình được viết bằng Java. Requirement có thể đến từ khách hàng nên các kỹ sư Java rất dễ dàng bảo trì. Điều này hoàn toàn không mô tả chức năng của chương trình. Nó vẫn sẽ thực hiện y hệt như trong bất kỳ ngôn ngữ lập trình nào, biến nó trở thành non-functional requirement."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Có nhiều loại non-functional requirement khác nhau, được phân loại thành product, organizational và external:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Product"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Liên quan đến behavior của product (code, server, ...). Ví dụ: Product phải được mã hóa bằng Java, sử dụng các server dựa trên Microsoft."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Organizational"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Các chính sách, tiêu chuẩn, quy trình của công ty. Project sẽ được phát triển bằng scrum. Mỗi chức năng đều phải được ghi lại."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "External"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Các điều luật, quy định, xu hướng bên ngoài. Product phải sử dụng SSL theo luật Châu Âu XYZ. Product nên sử dụng kỹ thuật mới của XYZ để thu thập dữ liệu."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/non-functional-requirements-cP8No",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Yêu cầu phần mềm"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
