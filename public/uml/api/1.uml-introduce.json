@@ -1,0 +1,43 @@
+{
+    "slug": "tong-quan-ve-uml",
+    "title": "Tổng quan về UML",
+    "metaDescription": "Giới thiệu tổng quan về UML, vai trò của UML trong thiết kế phần mềm và lập trình hướng đối tượng.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tổng quan về UML"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "UML - Unified Modeling Language (Ngôn ngữ mô hình hóa thống nhất) là một ngôn ngữ mà các phương pháp hướng đối tượng sử dụng để thiết kế các hệ thống thông tin một cách nhanh chóng. UML cung cấp một tập hợp các biểu tượng và kỹ thuật biểu đồ trực quan và bằng cách sử dụng chúng bạn có thể phác thảo biểu đồ hệ thống một cách dễ dàng và chính xác."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Nó gần như là một bước không thể thiếu khi bắt đầu thực thi một dự án phần mềm. Bất cứ khi nào lập trình viên gặp khúc mắc trong quy trình viết code, họ sẽ cần một cái nhìn tổng quan về hệ thống cần xây dựng. Đây là lúc mà UML phát huy tác dụng."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Đồng thời, khi cần cải tiến chức năng của phần mềm, tất cả mọi người sẽ ngồi xuống cùng thảo luận dựa trên biểu đồ UML mà không cần phải mở source code."
+                }
+            ]
+        }
+    ]
+}

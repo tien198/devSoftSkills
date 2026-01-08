@@ -1,0 +1,340 @@
+{
+    "slug": "usecase-diagram-va-story-mapping",
+    "title": "UseCase Diagram và Story Mapping",
+    "metaDescription": "Giới thiệu UseCase Diagram và Story Mapping, cách sử dụng, so sánh và các bước xây dựng User Story Map trong phát triển phần mềm.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "UseCase Diagram"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "UseCase Diagram được hiểu là biểu đồ tính năng của sản phẩm cung cấp cho người dùng. Bản vẽ này giúp người dùng hiểu sản phẩm cung cấp những tính năng gì, hoặc người dùng có thể làm được gì với sản phẩm."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "UseCase Diagram bao gồm 3 phần chính:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Những loại User (người dùng) trong hệ thống (Actors)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Những feature (tính năng) có trong hệ thống (Use Cases)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Mối quan hệ giữa Actors và Use Cases."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Dưới đây là ví dụ biểu đồ Use Cases đơn giản về Facebook Status – những gì bạn post lên mạng xã hội Facebook."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/2.1.png",
+            "alt": "use case",
+            "caption": ""
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài đọc: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://thinhnotes.com/chuyen-nghe-ba/use-case-diagram-va-5-sai-lam-thuong-gap/",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Use Case Diagram và 5 sai lầm thường gặp"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "User strore vs Story Mapping"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Story Map là một phương pháp sắp xếp user story để tạo cái nhìn tổng thể, trực quan về tính năng của phần mềm hoặc sản phẩm. Đây là công cụ lập kế hoạch ở mức high-level (tổng quát) giúp các bên liên quan xác định các hạng mục ưu tiên của dự án dựa trên thông tin hiện có."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Về cơ bản, Story Map là việc sắp xếp thứ tự ưu tiên các tính năng và user story cho sản phẩm đang được xây dựng."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/2.2.png",
+            "alt": "story map",
+            "caption": ""
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/2.3.png",
+            "alt": "story map",
+            "caption": ""
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tại sao nên sử dụng Story Map?"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "User Story Diagram có liên quan mật thiết đến UseCase Diagram. Cả hai đều được sử dụng để khám phá và ghi lại yêu cầu của khách hàng, xác định các nhóm người dùng khác nhau và nhu cầu của họ, nhưng được sử dụng theo những cách khác nhau."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "UseCase Diagram là biểu đồ tính năng của sản phẩm cung cấp cho người dùng. Biểu đồ sẽ cho người dùng hiểu được sản phẩm này cung cấp những tính năng gì cho người dùng, hoặc người dùng có thể làm gì với sản phẩm."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/2.4.png",
+            "alt": "story map",
+            "caption": ""
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "User Story "
+                },
+                {
+                    "type": "text",
+                    "value": "giúp xây dựng Product Backlog tốt hơn bằng cách lấy người dùng làm trung tâm, nhưng không phản ánh toàn bộ hành trình trải nghiệm của người dùng."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Story map "
+                },
+                {
+                    "type": "text",
+                    "value": "sẽ giúp bạn sắp xếp user story thành một mô hình có thể quản lý để lên kế hoạch, hiểu và sắp xếp chức năng của hệ thống một cách có hệ thống."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Story Map cho phép nhìn thấy bức tranh tổng thể của backlog dự án."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Hỗ trợ đưa ra quyết định và sắp xếp thứ tự ưu tiên backlog một cách hiệu quả."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Giúp xác định các phần đã có và còn thiếu để sản phẩm hoạt động."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Sắp xếp thứ tự ưu tiên các công việc cần làm."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Quản lý User Stories hiệu quả và giữ sự tập trung vào mục tiêu cho toàn đội."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Cơ chế hoạt động và các bước vẽ User Story Map"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Các bước triển khai User Story Map:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Xác định các nhóm chức năng (hoặc trình tự sử dụng) của sản phẩm theo chiều ngang trên đầu biểu đồ, từ trái sang phải. Dưới các cột, ta sẽ sắp xếp user story cards trong mỗi chức năng theo mức độ ưu tiên giảm dần."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Sắp xếp user story trong mỗi nhóm chức năng theo mức độ ưu tiên giảm dần."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Ở hàng trên cùng của Story Map, ta đặt các stories mô tả các chức năng thiết yếu cần thiết để hệ thống hoạt động. Nhóm này được gọi là Backbone."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Hàng tiếp theo, ta đặt các stories mô tả các chức năng của hệ thống sẽ đáp ứng các nhu cầu cơ bản của khách hàng. Nhóm stories này được gọi là Walking Skeleton. Khi các user stories trong nhóm Walking Skeleton hoàn thành, sản phẩm đã có thể hoạt động ở mức cơ bản nhất. "
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Sắp xếp các user stories còn lại theo thứ tự ưu tiên giảm dần. Từ đó, nhóm có một bức tranh tổng quát theo sản phẩm, theo chức năng, theo giá trị mang lại từ sản phẩm."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/2.5.png",
+            "alt": "use case",
+            "caption": ""
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lưu ý: Cập nhập Story Map trong suốt quá trình phát triển"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Nó đóng vai trò như lộ trình trực quan thể hiện những gì đã hoàn thành, những gì còn lại và kế hoạch tiếp theo của dự án. Múc độ ưu tiền thường bị thay đổi nên cần cập nhật liên tục."
+                }
+            ]
+        }
+    ]
+}

@@ -34,6 +34,12 @@ export default function Home() {
       >
         Agile
       </Link>
+      <Link
+        to="/uml"
+        className="text-blue-400 hover:underline hover:text-blue-300"
+      >
+        Flowchart(drawio) & UML
+      </Link>
     </div>
   );
 }

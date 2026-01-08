@@ -15,6 +15,8 @@ import ShellLayout from "./pages/shell/Layout";
 import Shell from "./pages/shell/Shell";
 import AgileLayout from "./pages/agile/Layout";
 import Agile from "./pages/agile/Shell";
+import UMLLayout from "./pages/uml/Layout";
+import UML from "./pages/uml/UML";
 
 const router = createBrowserRouter([
   {
@@ -127,6 +129,26 @@ const router = createBrowserRouter([
             element: <Agile />,
             loader: (args) =>
               import("./pages/agile/loader").then((mod) => mod.loader(args)),
+          },
+        ],
+      },
+      {
+        path: "uml",
+        element: <UMLLayout />,
+        children: [
+          {
+            index: true,
+            element: (
+              <div className="flex justify-center items-center mt-15 text-2xl">
+                Select an item above to see details !
+              </div>
+            ),
+          },
+          {
+            path: ":id",
+            element: <UML />,
+            loader: (args) =>
+              import("./pages/uml/loader").then((mod) => mod.loader(args)),
           },
         ],
       },
