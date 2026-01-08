@@ -22,6 +22,12 @@ export default function Home() {
       >
         Project Manager
       </Link>
+      <Link
+        to="/shell"
+        className="text-blue-400 hover:underline hover:text-blue-300"
+      >
+        Shell
+      </Link>
     </div>
   );
 }

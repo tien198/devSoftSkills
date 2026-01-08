@@ -1,0 +1,62 @@
+{
+  "slug": "command-line-environment",
+  "title": "Command-line Environment",
+  "metaDescription": "Giới thiệu môi trường giao diện dòng lệnh và các kỹ thuật cải thiện quy trình làm việc với shell, quản lý tiến trình và làm việc với máy từ xa.",
+  "content": [
+    {
+      "type": "heading3",
+      "children": [
+        {
+          "type": "text",
+          "value": "Môi trường của giao diện dòng lệnh (Command line)"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Trong phần này, chúng ta sẽ xem xét một số cách giúp bạn cải thiện quy trình làm việc khi sử dụng shell. Ở phần trước, chúng ta đã biết cách làm việc với shell chủ yếu xoay quanh việc thực thi các lệnh khác nhau."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Trong bài giảng này, chúng ta sẽ tìm hiểu cách chạy nhiều quy trình cùng lúc trong khi vẫn có thể theo dõi chúng, cách dừng hoặc tạm dừng một quy trình cụ thể, cũng như cách chạy một quy trình ngầm trong nền (background)."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Bên cạnh đó, bạn cũng sẽ được giới thiệu về các cách khác nhau để mở rộng và phát triển môi trường shell, sử dụng các công cụ hỗ trợ, và làm việc với các remote machine (máy từ xa) thông qua SSH."
+        }
+      ]
+    },
+    {
+      "type": "heading3",
+      "children": [
+        {
+          "type": "text",
+          "value": "Bài đọc: "
+        },
+        {
+          "type": "link",
+          "href": "https://missing-semester-vn.github.io/2020/command-line/",
+          "children": [
+            {
+              "type": "text",
+              "value": "Môi trường của giao diện dòng lệnh"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

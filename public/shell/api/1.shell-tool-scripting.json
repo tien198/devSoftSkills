@@ -1,0 +1,162 @@
+{
+    "slug": "shell-tools-va-scripting",
+    "title": "Shell Tools và Scripting",
+    "metaDescription": "Giới thiệu về Shell, Bash và các công cụ shell, cùng khái niệm cơ bản về Shell Scripting và ngôn ngữ kịch bản Shell.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Shell"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ngày nay, máy tính có vô vàn các giao diện khác nhau để người dùng tương tác với chúng: từ giao diện đồ họa, giao diện âm thanh cho tới giao diện thực tế ảo AR/VR. Những giao diện này đáp ứng phần lớn các trường hợp sử dụng, tuy nhiên lại bị hạn chế về khả năng thao tác mà chúng cho phép."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ví dụ, bạn không thể thực hiện một thao tác nếu giao diện không được lập trình sẵn nút bấm cho thao tác đó, hoặc không thể ra lệnh bằng giọng nói cho một câu lệnh mà máy tính chưa được dạy để hiểu. Vì vậy, để tận dụng toàn bộ sức mạnh của máy tính, chúng ta cần quay về giao diện truyền thống và cơ bản nhất: giao diện dòng lệnh – Shell."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Hầu như mọi nền tảng tính toán đều có ít nhất một loại shell. Mặc dù mỗi shell có thiết kế và chức năng khác nhau, điểm chung của chúng là cho phép người dùng chạy chương trình, nhập dữ liệu và truy xuất dữ liệu đầu ra theo một quy chuẩn rõ ràng."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong bài học này, chúng ta tập trung vào Bourne Again SHell (bash) – một loại shell rất phổ biến với cú pháp cơ bản và được sử dụng rộng rãi trong nhiều môi trường khác nhau."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Để mở một shell prompt (nơi nhập lệnh), bạn cần một chương trình terminal. Phần mềm này thường được cài sẵn trong hệ điều hành hoặc có thể dễ dàng cài đặt thêm."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài đọc: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://missing-semester-vn.github.io/2020/course-shell/",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Shell"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Các công cụ của shell và viết ngôn ngữ kịch bản"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong phần này, bạn sẽ tìm hiểu các kiến thức cơ bản về việc sử dụng bash như một ngôn ngữ kịch bản, đồng thời làm quen với một số công cụ shell thường được sử dụng trong môi trường dòng lệnh hằng ngày."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Shell Scripting – Ngôn ngữ kịch bản Shell"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Chúng ta đã quen với việc thực hiện các lệnh bằng shell và kết hợp chúng với nhau thông qua pipe để tạo thành quy trình xử lý. Tuy nhiên, trong nhiều trường hợp, bạn cần thực thi hàng loạt câu lệnh cùng với các cấu trúc điều khiển như điều kiện hoặc vòng lặp."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ngôn ngữ shell cho phép bạn thực hiện các tác vụ phức tạp hơn. Mỗi shell thường có một ngôn ngữ kịch bản riêng với cú pháp riêng để làm việc với biến và cấu trúc điều khiển."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Điểm khác biệt của ngôn ngữ shell so với các ngôn ngữ kịch bản khác là nó được tối ưu cho các tác vụ liên quan đến môi trường dòng lệnh. Việc tạo pipeline cho lệnh, ghi kết quả ra file hay đọc dữ liệu từ thiết bị nhập chuẩn đều là những thao tác nguyên thủy và dễ sử dụng."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Chính vì vậy, shell script thường đơn giản và tiện lợi hơn cho các công việc tự động hóa trên dòng lệnh so với các ngôn ngữ kịch bản tổng quát. Trong phần này, chúng ta sẽ sử dụng bash để lập trình shell vì tính phổ biến của nó."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài đọc: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://missing-semester-vn.github.io/2020/shell-tools/",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các công cụ của Shell và viết ngôn ngữ kịch bản"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
