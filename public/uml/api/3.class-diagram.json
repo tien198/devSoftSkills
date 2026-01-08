@@ -1,0 +1,353 @@
+{
+    "slug": "class-diagram-va-kha-nang-hien-thi-cac-moi-quan-he",
+    "title": "Class Diagram và khả năng hiển thị các mối quan hệ",
+    "metaDescription": "Giới thiệu Class Diagram trong UML, các thành phần của lớp, khả năng hiển thị và các mối quan hệ như Association, Generalization.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Biểu đồ lớp (Class Diagram)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Biểu đồ lớp hay còn gọi là mô hình tĩnh hoặc biểu đồ cấu trúc lớp, đây là biểu đồ phổ biến nhất. Nó thể hiện cấu trúc của hệ thống, bao gồm các lớp và các mối quan hệ giữa các lớp."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Một biểu đồ lớp chỉ ra cấu trúc tĩnh của các lớp trong hệ thống. Các lớp đại diện cho các đối tượng được xử lý trong hệ thống và có thể quan hệ với nhau dưới nhiều dạng khác nhau."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Liên kết (Association – được nối kết với nhau)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Phụ thuộc (Dependency – một lớp phụ thuộc vào lớp khác)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Chuyên biệt hóa (Specialization – một lớp là kết quả chuyên biệt của lớp khác)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Đóng gói (Package – các lớp được hợp lại thành một đơn vị)."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tất cả các mối quan hệ đều được thể hiện trong biểu đồ lớp, kèm theo cấu trúc bên trong của lớp như thuộc tính (attribute) và phương thức (operation)."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Một hệ thống thường có nhiều biểu đồ lớp khác nhau và một lớp có thể tham gia vào nhiều biểu đồ lớp."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Các thành phần của một lớp"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Tên lớp (viết theo kiểu CamelCase)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các thuộc tính (Attribute)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các phương thức (Method)."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/3.1.png",
+            "alt": "use case",
+            "caption": ""
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/3.2.png",
+            "alt": "use case",
+            "caption": ""
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài đọc: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://viblo.asia/p/tim-hieu-ve-cach-thiet-ke-class-diagram-L4x5xLyY5BM",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Tìm hiểu về cách thiết kế Biểu đồ lớp"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Khả năng hiển thị: Công khai, Riêng tư, Bảo vệ, Đóng gói"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "UML cho phép kiểm soát mức độ truy cập tới các thuộc tính và phương thức trong Class Diagram."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Công khai (Public): truy cập được từ bên ngoài lớp (ký hiệu +)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Riêng tư (Private): chỉ sử dụng trong nội bộ lớp (ký hiệu -)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Bảo vệ (Protected): sử dụng trong lớp và lớp kế thừa (ký hiệu #)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Đóng gói (Package): sử dụng trong cùng package (ký hiệu ~)."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Mối quan hệ liên kết (Association)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sau khi xác định các lớp chính trong hệ thống, bước tiếp theo là tìm ra các mối quan hệ giữa chúng, dựa trên các Use Case."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Association thể hiện sự liên kết giữa các thực thể, ví dụ giữa Actor và Use Case hoặc giữa các Class với nhau."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ví dụ với ứng dụng Travel Expense, từ yêu cầu theo dõi chi phí du lịch, ta xác định hai Class là Trip và Expense với mối quan hệ một chuyến đi bao gồm nhiều chi phí."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/3.4.png",
+            "alt": "use case",
+            "caption": ""
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Lưu ý: tránh ghép nối chặt chẽ, hãy giữ biểu đồ đơn giản và dễ hiểu."
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Mối quan hệ bao quát hóa (Generalization)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Generalization là mối quan hệ cha – con, còn được gọi là kế thừa. Đối tượng con kế thừa thuộc tính và phương thức của đối tượng cha."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Ký hiệu: "
+                },
+                {
+                    "type": "text",
+                    "value": "A is-a B"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/3.5.png",
+            "alt": "use case",
+            "caption": ""
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "A là tổng quát của B."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "B là trường hợp đặc biệt của A."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "A là cha của B, B là con của A."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ngoài ra còn có các mối quan hệ khác như Dependency, Aggregation, Composition và Realization."
+                }
+            ]
+        }
+    ]
+}

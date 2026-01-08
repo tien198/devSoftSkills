@@ -1,0 +1,157 @@
+{
+    "slug": "sequence-diagram-va-activity-diagram",
+    "title": "Sequence Diagram và Activity Diagram",
+    "metaDescription": "Giới thiệu Sequence Diagram và Activity Diagram trong UML, vai trò của biểu đồ động trong việc mô tả tương tác và luồng xử lý của hệ thống.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sequence Diagram (Biểu đồ tuần tự)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Mô hình biểu đồ UseCase và biểu đồ Class là các biểu đồ tĩnh, rất hiệu quả trong việc mô tả cấu trúc của hệ thống. Tuy nhiên, chúng không thể hiện được cách các đối tượng tương tác với nhau theo thời gian hay khi nào các đối tượng được tạo ra."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Để giải quyết vấn đề này, UML cung cấp các biểu đồ động (dynamic) nhằm mô tả sự giao tiếp giữa các đối tượng trong hệ thống."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sequence Diagram là bản vẽ mô tả sự tương tác của các đối tượng để tạo nên các chức năng của hệ thống. Biểu đồ này thể hiện sự tương tác theo trục thời gian, rất phù hợp để thiết kế và cài đặt các chức năng của phần mềm."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ví dụ về một Sequence Diagram:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/4.1.png",
+            "alt": "sequence diagram",
+            "caption": ""
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài đọc: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://drawio-app.com/create-uml-sequence-diagrams-in-draw-io/",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Biểu đồ Sequence"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài đọc: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://codelearn.io/sharing/sequence-diagram-trong-uml",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Thiết kế chức năng với Sequence Diagram"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Activity Diagram (Biểu đồ hoạt động)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Activity Diagram là biểu đồ tập trung mô tả các hoạt động và luồng xử lý bên trong hệ thống. Nó được sử dụng để mô tả quy trình nghiệp vụ, luồng xử lý của một chức năng hoặc các hoạt động của một đối tượng."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Có thể nói Activity Diagram là biểu đồ phù hợp nhất để mô hình hóa quy trình công việc, hệ thống hoặc quy trình kinh doanh."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ví dụ Activity Diagram mô tả hoạt động rút tiền từ ATM:"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/uml/images/4.2.png",
+            "alt": "activity diagram",
+            "caption": ""
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài đọc: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://drawio-app.com/create-uml-activity-diagrams-in-draw-io/",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Biểu đồ hoạt động"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "slug": "statechart-diagram",
+    "title": "Statechart Diagram",
+    "metaDescription": "Giới thiệu Statechart Diagram trong UML, dùng để mô hình hóa trạng thái và hành vi động của đối tượng trong suốt vòng đời.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Statechart Diagram (Biểu đồ trạng thái)"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Statechart Diagram là biểu đồ được sử dụng để mô hình hóa bản chất động của hệ thống. Biểu đồ này xác định các trạng thái khác nhau của một đối tượng trong suốt vòng đời tồn tại của nó và cách các trạng thái đó thay đổi thông qua các sự kiện."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Hành vi của đối tượng được phân tích và biểu diễn bằng một chuỗi các sự kiện có thể xảy ra tại một hoặc nhiều trạng thái khác nhau. Mỗi sự kiện sẽ kích hoạt sự chuyển đổi từ trạng thái này sang trạng thái khác."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Mỗi Statechart Diagram thường đại diện cho các đối tượng của một lớp duy nhất và theo dõi các trạng thái khác nhau của đối tượng đó trong toàn bộ hệ thống."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bài đọc: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://drawio-app.com/uml-state-diagrams-with-draw-io/",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Biểu đồ Statechart"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
