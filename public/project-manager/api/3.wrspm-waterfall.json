@@ -1,0 +1,421 @@
+{
+    "slug": "mo-hinh-wrspm-va-waterfall",
+    "title": "Mô hình WRSPM và mô hình Waterfall",
+    "metaDescription": "Giới thiệu mô hình WRSPM, các thành phần World–Requirement–Specification–Program–Machine và phân tích mô hình Waterfall trong phát triển phần mềm.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. Mô hình WRSPM"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Mô hình WRSPM giúp xác định vấn đề tốt hơn; với mô hình này, chúng ta không chỉ xem xét chương trình đang được xây dựng mà còn phải cân nhắc cả những yếu tố khác như môi trường và phần cứng thực tế. Việc xem xét những yếu tố như môi trường có thể tạo ra những khác biệt quan trọng đối với cách lập trình chương trình."
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "World"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Các giả định được dùng để phát triển hệ thống: Có Internet không? Có điện không? Tốc độ Internet là bao nhiêu?"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Requirements"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Xác định vấn đề ngay lập tức và tìm cách tiến hành giải pháp cho vấn đề đó."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Specifications"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Xác định các yêu cầu kỹ thuật của hệ thống, tại đây ý tưởng về giải pháp được nối trực tiếp vào hệ thống."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Program"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Chương trình và code."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Machine"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Phần cứng vật lý cần thiết cho phần mềm như server, RAM, CPU, ..."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/project-manager/images/3.1.1.png",
+            "alt": "wrspm",
+            "caption": ""
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Chúng ta có thêm các phạm vi phân loại sau:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Eh - Environment Hidden"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Những dữ liệu trong môi trường, có thể chỉ là khái niệm hoặc ý tưởng, ví dụ như password bạn nhớ trong đầu."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Ev - Environment Visible"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Những dữ liệu trong môi trường có thể quan sát được, ví dụ quá trình nhập password vào terminal."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Sv - System Visible"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Phần hệ thống mà người dùng có thể thấy và tương tác như bàn phím, màn hình, chuột, giao diện chương trình."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Sh - System Hidden"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Phần hệ thống không hiện hữu với người dùng, bao gồm logic xử lý nội bộ và các thành phần phần cứng bên trong."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/wrspm-0TFI5",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "WRSPM"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Chúng ta cùng theo dõi và phân tích một ví dụ thực tế về việc sử dụng mô hình WRSPM trong bài giảng dưới đây."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/wrspm-model-real-world-example-1wPBO",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Ví dụ thực tế về mô hình WRSPM"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. Mô hình Waterfall"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong mô hình Waterfall, dự án tiến triển theo một chuỗi các bước tuần tự: kiến trúc hệ thống, phân tích yêu cầu, thiết kế, triển khai, kiểm thử và bảo trì. Sau mỗi giai đoạn, nhóm cần đánh giá xem dự án đã sẵn sàng để chuyển sang giai đoạn tiếp theo hay chưa."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Mô hình Waterfall là điển hình cho predictive model, với các đặc điểm sau:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các bước của dự án được lên kế hoạch rất chi tiết và hoàn chỉnh."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Mất nhiều thời gian và chi phí cao để đưa sản phẩm ra thị trường."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Có rủi ro khi cần thích nghi với các công nghệ mới."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Để thực thi được Waterfall, nhóm phát triển cần:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Hiểu rõ các yêu cầu của dự án."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Có kinh nghiệm xây dựng các dự án phần mềm tương tự."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Quy trình chuyển giao từ yêu cầu đến sản phẩm phải được lên kế hoạch và thực hiện đầy đủ."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Ưu điểm của Waterfall:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Đơn giản, dễ hiểu và dễ triển khai."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Có thể dự đoán và phát hiện lỗi sớm."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Hiệu quả với các dự án phù hợp."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "bold",
+                    "value": "Nhược điểm của Waterfall:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Thiếu linh hoạt khi có sự thay đổi."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Bản release đầu tiên mất rất nhiều thời gian."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Nếu dự án có yêu cầu ổn định, dễ dự đoán và mang tính lặp lại, mô hình Waterfall sẽ là lựa chọn phù hợp."
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/project-manager/images/3.2.1.png",
+            "alt": "water fall",
+            "caption": ""
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/waterfall-model-sxPcK",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Waterfall Model"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

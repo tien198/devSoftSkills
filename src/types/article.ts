@@ -21,7 +21,7 @@ export type LinkNode = {
 };
 
 // Tổng hợp các loại Inline Node có thể xuất hiện trong 1 dòng
-export type InlineNode = TextNode | StyleNode | LinkNode;
+export type InlineNode = TextNode | StyleNode | LinkNode | ImageBlock;
 
 // --- 2. BLOCK NODES (Các khối cấu trúc trang) ---
 

@@ -1,0 +1,369 @@
+{
+    "slug": "thiet-ke-phan-mem",
+    "title": "Thiết kế phần mềm",
+    "metaDescription": "Giới thiệu giai đoạn thiết kế phần mềm, vai trò của thiết kế, module hóa phần mềm và các nguyên tắc như coupling, cohesion, information hiding.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "1. Thiết kế phần mềm"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sau khi đã hoàn thiện kiến trúc của hệ thống, chúng ta bắt đầu sang phần thiết kế, tức là thực sự lên kế hoạch cho hệ thống của mình. Ở bước này, hãy làm càng chi tiết càng tốt."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Thiết kế là bước chúng ta bắt đầu áp dụng kế hoạch và ý tưởng của mình vào các giải pháp thực tế. Giải pháp thực tế ở đây là việc chúng ta bắt đầu tìm cách sử dụng kiến trúc, kế hoạch tổng thể của chúng ta và bắt tay vào thiết kế nó. Thiết kế hoàn toàn là đưa ra một kế hoạch chi tiết hơn từ kiến trúc."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Các bước chính trong quá trình thiết kế một module trong phần mềm:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Làm rõ vấn đề (thông qua tài liệu yêu cầu và đặc điểm kỹ thuật)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Xem xét và xác định các giải pháp để giải quyết vấn đề với TMTOWTDI (there's more than one way to do it)."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Mô tả giải pháp một cách trừu tượng bằng wireframe, UML, ..."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Tiếp tục lặp lại các bước trên cho đến khi có thể bàn giao thiết kế cho nhóm phát triển và họ có thể triển khai đúng đắn."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Kết hợp với kiến trúc phần mềm, chúng ta có 6 giai đoạn sau mà thiết kế sẽ đóng vai trò then chốt ở 3 bước cuối ( 3 bước đầu là kiến trúc ):"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Quyết định kiến trúc hệ thống sẽ được sử dụng."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Xác định các thành phần có trách nhiệm và hành vi riêng biệt."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Xác định cách các thành phần này sẽ tương tác thông qua giao diện của chúng."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Thiết kế các thành phần riêng lẻ."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Thiết kế cấu trúc dữ liệu."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Thiết kế giải thuật."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/software-design-introduction-kUomw",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Giới thiệu về thiết kế phần mềm"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "2. Module hóa phần mềm"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Thiết kế phần mềm tập trung vào việc tạo ra giải pháp, các giao phẩm và tài liệu cần thiết để nhóm phát triển có thể xây dựng hệ thống đáp ứng nhu cầu của người dùng hoặc khách hàng. Để hoàn thành 3 bước thiết kế cuối, chúng ta cần đến module hóa phần mềm."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trọng tâm là chia nhỏ project thành các subsystem và module. Subsystem là hệ thống độc lập mang giá trị riêng. Module là thành phần của subsystem và không thể hoạt động độc lập như một hệ thống hoàn chỉnh."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Giả sử trong giai đoạn kiến trúc, chúng ta chia tách project chính thành 4 phần khác nhau, xem xét từng phần một và nghĩ ra các subsystem cần thiết. Sau đó, hãy đi vào từng subsystem và xem liệu có thể chia nó thành nhiều subsystem nữa hay không. Cuối cùng, chúng ta sẽ nghĩ ra một số module hoạt động cùng nhau để hoàn thành nhiệm vụ của subsystem."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Việc phân tách chương trình là một trong những phần khó nhất của phát triển phần mềm. Quá trình này cần nhiều nỗ lực, sự kiên trì và nên được lặp lại, tinh chỉnh dần cho đến khi đạt được cấu trúc tối ưu."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Để module hóa phần mềm hiệu quả, cần chú ý đến các khía cạnh sau:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Coupling"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Mức độ phụ thuộc của một module vào các module khác."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Cohesion"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Mức độ tập trung của module vào một nhiệm vụ duy nhất."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Information Hiding"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Ẩn đi độ phức tạp của chương trình bên trong \"black box\"."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Data Encapsulation"
+                        },
+                        {
+                            "type": "text",
+                            "value": " - Ẩn chi tiết triển khai, chỉ cung cấp giao diện cho người dùng."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Information hiding và data encapsulation giúp bảo vệ tính toàn vẹn dữ liệu, kiểm soát luồng dữ liệu và mang lại trải nghiệm sử dụng dễ dàng hơn."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Có 3 mục tiêu chính khi chia một module thành các module nhỏ hơn:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Khả năng phân rã."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Khả năng kết hợp."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Tính dễ hiểu của các module."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Việc lặp lại, tinh chỉnh và tái cấu trúc các subsystem và module là cần thiết để đạt được thiết kế tốt. Nhiều kỹ sư cho rằng điều này giúp quá trình lập trình hiệu quả hơn rất nhiều."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: Tính Mô-đun"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/software-design-modularity-xH6BK",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Tính Mô-đun"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

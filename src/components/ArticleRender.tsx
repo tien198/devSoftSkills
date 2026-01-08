@@ -13,6 +13,22 @@ const RenderInline = ({ node }: { node: InlineNode }) => {
     case "italic":
       return <em>{node.value}</em>;
 
+    case "image":
+      return (
+        <figure className="my-6">
+          <img
+            src={node.src}
+            alt={node.alt}
+            className="max-w-full h-auto rounded"
+          />
+          {node.caption && (
+            <figcaption className="text-sm text-center text-gray-500 mt-2">
+              {node.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+
     case "link":
       return (
         <a

@@ -1,0 +1,368 @@
+{
+    "slug": "khai-niem-kiem-thu",
+    "title": "Khái niệm kiểm thử",
+    "metaDescription": "Giới thiệu khái niệm kiểm thử phần mềm, unit testing, integration testing, các giai đoạn kiểm thử và các khái niệm cơ bản về bug.",
+    "content": [
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Testing (Kiểm thử) là quá trình tìm lỗi, có thể là lỗi trong code hoặc do chúng không đáp ứng được yêu cầu. Nếu ứng dụng không thể thực hiện những gì nó được yêu cầu thì sẽ xuất hiện vấn đề. Trong quá trình kiểm thử, chúng ta cần đảm bảo chương trình hoạt động theo tất cả các yêu cầu."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Unit Testing"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Kiểm thử đơn vị tập trung vào đơn vị nhỏ nhất của phần mềm. Chúng ta cố gắng tách biệt các khu vực khác nhau và lặp lại cho đến khi kiểm tra hết mọi module của chương trình. Ở bước này, chúng ta lấy một module và cung cấp cho nó các test case, sau đó kiểm tra kết quả so với oracle."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Mục tiêu là đảm bảo mỗi module thực hiện đúng nhiệm vụ được giao mà không bị ảnh hưởng bởi các module khác. Vì vậy, trong unit testing, chúng ta thường sử dụng các giá trị giả để cô lập module. Khi có lỗi xảy ra, chúng ta có thể xác định chính xác lỗi thuộc về phần nào."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Integration Testing"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Sau khi chắc chắn rằng tất cả các module hoạt động đúng, bước tiếp theo là Integration testing (kiểm thử tích hợp). Giai đoạn này tập trung vào việc kiểm thử các module khi chúng kết hợp với nhau, bao gồm cả kiến trúc và cách chúng giao tiếp."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Trong unit testing, các test case được áp dụng cho từng module riêng lẻ. Với integration testing, test case được thiết kế cho các nhóm module. Ví dụ, thay vì kiểm tra từng ô nhập liệu, chúng ta sẽ kiểm tra toàn bộ biểu mẫu."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Các giai đoạn kiểm thử phần mềm"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Chúng ta có một số giai đoạn chính như sau:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Unit Testing"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Kiểm thử các hàm hoặc thành phần riêng lẻ."
+                        },
+                        {
+                            "type": "image",
+                            "src": "/project-manager/images/5.1.png",
+                            "alt": "water fall",
+                            "caption": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Module testing"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Hình thức kiểm thử tích hợp đầu tiên, bao gồm nhiều unit."
+                        },
+                        {
+                            "type": "image",
+                            "src": "/project-manager/images/5.2.png",
+                            "alt": "water fall",
+                            "caption": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Sub-system testing"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Kiểm thử hệ thống con, tập trung vào việc đảm bảo các giao diện giữa các hệ thống con, module và thành phần hoạt động đúng theo đặc tả. Kiểm thử này xác nhận rằng các thành phần hoạt động cùng nhau như dự định."
+                        },
+                        {
+                            "type": "image",
+                            "src": "/project-manager/images/5.3.png",
+                            "alt": "water fall",
+                            "caption": ""
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "System testing"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Kiểm thử toàn bộ hệ thống hoàn chỉnh trước khi đưa phần mềm vào sử dụng."
+                        },
+                        {
+                            "type": "image",
+                            "src": "/project-manager/images/5.4.png",
+                            "alt": "water fall",
+                            "caption": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Ngoài ra, còn có các loại kiểm thử khác nhằm đảm bảo hệ thống đáp ứng nhu cầu của người dùng:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Kiểm thử alpha"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Kiểm thử beta"
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Kiểm thử chấp nhận người dùng – UAT (User Acceptance Testing)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Một số khái niệm cơ bản trong Testing"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Test Data"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Dữ liệu đầu vào được thiết kế để kiểm thử hệ thống."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Test Case"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Cách vận hành hệ thống với dữ liệu đã cho."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Oracle"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Tập hợp các kết quả được coi là đúng."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "src": "/project-manager/images/5.5.png",
+            "alt": "water fall",
+            "caption": ""
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bug"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Bug là những sai lệch so với hành vi đã được dự kiến. Ví dụ, một trang web không thể load hoặc dịch vụ không chạy do code bị lỗi trong quá trình khởi động."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Một ví dụ khác là trang web đăng nhập người dùng vào tài khoản của người khác. Trong trường hợp này, hệ thống vẫn hoạt động nhưng hành vi không đúng với mong đợi ban đầu."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Một số khái niệm cơ bản về bug:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Failure"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Sự kiện mà chương trình đi chệch khỏi hành vi dự kiến."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Error"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Phần code dẫn đến lỗi."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Fault"
+                        },
+                        {
+                            "type": "text",
+                            "value": " – Kết quả thực tế của lỗi."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/software-processes/software-testing-introduction-XmIRH",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Giới thiệu về Kiểm thử phần mềm"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
