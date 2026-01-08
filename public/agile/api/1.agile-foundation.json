@@ -1,0 +1,300 @@
+{
+    "slug": "tu-duy-agile",
+    "title": "Tư duy Agile",
+    "metaDescription": "Giới thiệu tư duy Agile, lý do cần Agile, 4 giá trị cốt lõi và 12 nguyên tắc của Agile Manifesto.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Tại sao cần Agile?"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Agile là một phương pháp luận, một lối tư duy. Nó "
+                },
+                {
+                    "type": "bold",
+                    "value": "KHÔNG"
+                },
+                {
+                    "type": "text",
+                    "value": " đóng vai trò như mô hình."
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Agile được tạo ra do phạm vi phát triển phần mềm đang thay đổi:"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Chúng ta không thể dự đoán được chính xác hoàn toàn các yêu cầu của phần mềm, chúng thay đổi quá nhanh bên cạnh sự biến động của thị trường."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các vấn đề và rủi ro cần được chỉ ra và làm rõ sớm hơn, vì nếu phát hiện ra chậm trễ sẽ gây thiệt hại rất lớn về thời gian và chi phí."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Agile là một cách tiếp cận hay phương pháp để quản lý dự án xoay quanh các bước gia tăng và lặp đi lặp lại để hoàn thành dự án. Các phần gia tăng của một dự án được thực hiện trong các chu kỳ phát triển ngắn hạn. Phương pháp này ưu tiên phân phối nhanh, thích ứng với thay đổi và cộng tác hơn là quản lý từ trên xuống và tuân theo một kế hoạch đã định. Trong các quy trình Agile, có phản hồi liên tục, cho phép các thành viên trong nhóm điều chỉnh với các thách thức khi chúng phát sinh và các bên liên quan có cơ hội giao tiếp nhất quán."
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/agile-software-development/why-agile-aNH2E",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Tại sao cần Agile?"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "4 giá trị cốt lõi của Agile"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Các cá nhân và sự tương tác hơn là quy trình và công cụ: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Trong khi các công cụ và quy trình là quan trọng, Tuyên ngôn Agile ưu tiên những người đứng sau chúng. Có đúng người và cho phép họ tương tác nhịp nhàng với nhau có thể dẫn đến những thành công mà bản thân các công cụ không thể làm được."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Phần mềm chạy tốt hơn là tài liệu đầy đủ: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Những người tạo ra Agile tin rằng điều quan trọng hơn là hoàn thành công việc hơn là sa lầy vào các giai đoạn lập kế hoạch và tài liệu."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Cộng tác với khách hàng hơn là đàm phán hợp đồng: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Thay vì ngăn cản các bên liên quan rời khỏi dự án, Agile hướng tới việc duy trì liên hệ với họ trong suốt quá trình tạo."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Phản hồi với sự thay đổi hơn là bám theo kế hoạch: "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Việc tuân theo một kế hoạch mà không còn hợp lý để làm theo nữa có thể phản tác dụng. Thích ứng là trọng tâm của triết lý Agile."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "12 nguyên tắc của Agile"
+                }
+            ]
+        },
+        {
+            "type": "ordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Ưu tiên cao nhất là làm hài lòng khách hàng thông qua việc bàn giao phần mềm/sản phẩm có giá trị trong thời gian sớm và liên tục."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Sẵn sàng cho những thay đổi – thậm chí những thay đổi này xuất hiện muộn. Quy trình Agile khai thác sự thay đổi này nhằm gia tăng tính cạnh tranh cho khách hàng."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Cung cấp phần mềm hoạt động được trong thời gian ngắn từ vài tuần đến vài tháng, càng ngắn càng được ưu tiên."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Người kinh doanh và đội ngũ phát triển phải làm việc cùng nhau mỗi ngày trong suốt dự án."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Xây dựng dự án xung quanh những cá nhân có động lực. Cho họ môi trường làm việc thuận lợi và sự hỗ trợ cần thiết. Hãy có niềm tin rằng họ sẽ làm tốt công việc của mình."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Đối thoại trực tiếp mặt đối mặt là phương pháp hữu hiệu nhất trong việc truyền đạt thông tin."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Phần mềm chạy được là thước đo chính của tiến độ dự án."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Phát triển bền vững và duy trì việc phát triển liên tục."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Liên tục quan tâm đến kỹ thuật và thiết kế để tăng cường tính linh hoạt."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Đơn giản – nghệ thuật tối đa hóa số lượng công việc không làm – là điều cần thiết."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các kiến trúc, yêu cầu và thiết kế tốt nhất được tạo nên từ các nhóm tự tổ chức."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Trong khoảng thời gian đều đặn, nhóm phản ánh về cách trở nên hiệu quả hơn, sau đó điều chỉnh cho phù hợp."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Video: "
+                },
+                {
+                    "type": "link",
+                    "href": "https://www.coursera.org/lecture/agile-software-development/agile-manifesto-principles-iogOn",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Các nguyên tắc của Tuyên ngôn Agile (Agile Manifesto)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -100,7 +100,7 @@
                         },
                         {
                             "type": "image",
-                            "src": "/project-manager/images/5.1.png",
+                            "src": "/software-development-process/images/5.1.png",
                             "alt": "water fall",
                             "caption": ""
                         }
@@ -119,7 +119,7 @@
                         },
                         {
                             "type": "image",
-                            "src": "/project-manager/images/5.2.png",
+                            "src": "/software-development-process/images/5.2.png",
                             "alt": "water fall",
                             "caption": ""
                         }
@@ -138,7 +138,7 @@
                         },
                         {
                             "type": "image",
-                            "src": "/project-manager/images/5.3.png",
+                            "src": "/software-development-process/images/5.3.png",
                             "alt": "water fall",
                             "caption": ""
                         }
@@ -157,7 +157,7 @@
                         },
                         {
                             "type": "image",
-                            "src": "/project-manager/images/5.4.png",
+                            "src": "/software-development-process/images/5.4.png",
                             "alt": "water fall",
                             "caption": ""
                         }
@@ -261,7 +261,7 @@
         },
         {
             "type": "image",
-            "src": "/project-manager/images/5.5.png",
+            "src": "/software-development-process/images/5.5.png",
             "alt": "water fall",
             "caption": ""
         },

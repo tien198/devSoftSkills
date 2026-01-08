@@ -11,22 +11,28 @@ export default function Home() {
         Git
       </Link>
       <Link
+        to="/shell"
+        className="text-blue-400 hover:underline hover:text-blue-300"
+      >
+        Shell
+      </Link>
+      <Link
         to="/kaban-trello"
         className="text-blue-400 hover:underline hover:text-blue-300"
       >
         Kaban Trello
       </Link>
       <Link
-        to="/project-manager"
+        to="/software-development-process"
         className="text-blue-400 hover:underline hover:text-blue-300"
       >
-        Project Manager
+        Software Development Processes
       </Link>
       <Link
-        to="/shell"
+        to="/agile"
         className="text-blue-400 hover:underline hover:text-blue-300"
       >
-        Shell
+        Agile
       </Link>
     </div>
   );

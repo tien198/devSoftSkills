@@ -13,6 +13,8 @@ import ProjectManagerLayout from "./pages/project-manager/Layout";
 import PM from "./pages/project-manager/PM";
 import ShellLayout from "./pages/shell/Layout";
 import Shell from "./pages/shell/Shell";
+import AgileLayout from "./pages/agile/Layout";
+import Agile from "./pages/agile/Shell";
 
 const router = createBrowserRouter([
   {
@@ -67,7 +69,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "project-manager",
+        path: "software-development-process",
         element: <ProjectManagerLayout />,
         children: [
           {
@@ -105,6 +107,26 @@ const router = createBrowserRouter([
             element: <Shell />,
             loader: (args) =>
               import("./pages/shell/loader").then((mod) => mod.loader(args)),
+          },
+        ],
+      },
+      {
+        path: "agile",
+        element: <AgileLayout />,
+        children: [
+          {
+            index: true,
+            element: (
+              <div className="flex justify-center items-center mt-15 text-2xl">
+                Select an item above to see details !
+              </div>
+            ),
+          },
+          {
+            path: ":id",
+            element: <Agile />,
+            loader: (args) =>
+              import("./pages/agile/loader").then((mod) => mod.loader(args)),
           },
         ],
       },

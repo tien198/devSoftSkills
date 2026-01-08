@@ -51,7 +51,12 @@ export type ListItemBlock = {
   children: InlineNode[]; // Nội dung của <li>
 };
 
-export type ListBlock = {
+export type OlBlock = {
+  type: "ordered_list"; // Thẻ <ul>
+  children: ListItemBlock[]; // Chứa các thẻ <li>
+};
+
+export type UlBlock = {
   type: "unordered_list"; // Thẻ <ul>
   children: ListItemBlock[]; // Chứa các thẻ <li>
 };
@@ -67,7 +72,8 @@ export type ContentBlock =
   | ParagraphBlock
   | HeadingBlock
   | ImageBlock
-  | ListBlock
+  | OlBlock
+  | UlBlock
   | CodeBlock;
 
 // --- 3. ROOT OBJECT (Cấu trúc dữ liệu tổng thể của CMS) ---

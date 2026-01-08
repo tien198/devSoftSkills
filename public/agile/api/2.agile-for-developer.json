@@ -1,0 +1,125 @@
+{
+    "slug": "tu-duy-agile-cho-lap-trinh-vien",
+    "title": "Tư duy Agile cho lập trình viên",
+    "metaDescription": "Agile mindset cho lập trình viên: học từ thất bại, cộng tác, minh bạch, thích ứng thay đổi và phát triển bền vững trong team.",
+    "content": [
+        {
+            "type": "heading2",
+            "children": [
+                {
+                    "type": "text",
+                    "value": "Agile mindset bao gồm những gì?"
+                }
+            ]
+        },
+        {
+            "type": "unordered_list",
+            "children": [
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Nhìn vào thất bại như là một cơ hội để học tập. "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Một trong những khái niệm của Agile là việc tham gia vào phát triển sản phẩm, nâng cao và phát triển theo thời gian. Có nghĩa là khi một sprint thất bại, điều này chỉ đơn giản có nghĩa là cần thực hiện cải tiến."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Team luôn chào đón các quan điểm khác nhau và những tư tưởng đa dạng. "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Đó là lý do tại sao cần thiết lập kiểm tra chức năng chéo trong một team bởi lập trình viên có kinh nghiệm (senior developer) và các chuyên gia (expert) khác. Vì vậy, cần có những buổi Daily Scrum Meeting để thảo luận và tự quản lý. Nếu tất cả đều là lập trình viên (coder), tất cả đều biết về lập trình, cần đưa vào các kiểm thử viên (QA, tester), người phân tích (analysts) và các chuyên gia khác để tạo ra kết quả tốt hơn và thêm nhiều giá trị cho dự án."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Mọi người luôn vui vẻ. "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Dù khái niệm vui vẻ mang tính chủ quan, nhưng có thể dễ dàng quan sát và đo lường. Khi năng lượng cao, mọi người làm việc có động lực và dành thời gian với nhau ngoài Scrum hay văn phòng. Một team thực sự tốt sẽ có những trải nghiệm học tập đi kèm với sự vui vẻ."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Các workspace là bền vững. "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Biểu đồ Scrum Burndown giúp đánh giá tốc độ Sprint có phù hợp với team hay không. Bàn giao muộn và công việc chưa hoàn thành cho thấy tốc độ quá nhanh hoặc quá nhiều việc. Kết thúc sớm cho thấy tốc độ quá chậm hoặc team chưa được thử thách. Tốc độ bền vững là khi team làm việc đúng khả năng mà không quá căng thẳng."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Các thành viên trong team có thể chấp nhận thay đổi và thích ứng nhanh. "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Những người gặp khó khăn với Agile mindset thường là những người không thích sự thay đổi hoặc không xử lý tốt các tình huống phát sinh."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Team thật sự minh bạch. "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Agile mindset yêu cầu các thành viên minh bạch về công việc của họ, bao gồm cả thất bại. Khi gặp khó khăn, cần thừa nhận và đưa ra trong Daily Scrum để rút ra bài học và tránh lặp lại trong tương lai."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Mọi người muốn và cần phải cộng tác và giao tiếp. "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Scrum Master chỉ đóng vai trò hỗ trợ. Các thành viên có Agile mindset sẽ chủ động yêu cầu tương tác với team và tự quản lý công việc của mình."
+                        }
+                    ]
+                },
+                {
+                    "type": "list_item",
+                    "children": [
+                        {
+                            "type": "bold",
+                            "value": "Chia sẻ hiểu biết được thực hiện một cách tự nguyện và tự do. "
+                        },
+                        {
+                            "type": "text",
+                            "value": "Agile team mong muốn mọi người đều được trang bị kiến thức để giải quyết vấn đề và task. Vì vậy, chia sẻ kiến thức là một Agile mindset quan trọng và cần thiết cho team."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

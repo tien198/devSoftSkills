@@ -111,6 +111,20 @@ const RenderBlock = ({ block }: { block: ContentBlock }) => {
         </ul>
       );
 
+    case "ordered_list":
+      return (
+        <ol className="list-decimal ml-4 my-3">
+          {" "}
+          {/* Dùng className cho styling */}
+          {block.children.map((listItem, index) => (
+            // Mỗi list_item sẽ được render thành một thẻ <li>
+            <li key={index} className="mb-1">
+              {renderContent(listItem.children)}
+            </li>
+          ))}
+        </ol>
+      );
+
     case "code":
       return (
         <div className="mb-4 px-5 pt-2 bg-gray-900">
