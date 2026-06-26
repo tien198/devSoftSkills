@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import styles from "./FeBenk.module.css";
 
@@ -42,6 +43,18 @@ export function FeBenk() {
       <span>Thiết kế website chuyên nghiệp</span>
       <div>
         Measured FPS: <strong className={fpsStat}>{fps ?? "..."}</strong> / s
+      </div>
+      <div>
+        Hardware Concurrency:{" "}
+        <strong className={styles["good"]}>
+          {navigator.hardwareConcurrency}
+        </strong>
+      </div>
+      <div>
+        Device Memory:{" "}
+        <strong className={styles["good"]}>
+          {(navigator as any).deviceMemory}
+        </strong>
       </div>
     </div>
   );
