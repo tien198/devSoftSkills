@@ -17,6 +17,7 @@ import AgileLayout from "./pages/agile/Layout";
 import Agile from "./pages/agile/Shell";
 import UMLLayout from "./pages/uml/Layout";
 import UML from "./pages/uml/UML";
+import { FeBenk } from "./pages/font-end-benk/FeBenk";
 
 const router = createBrowserRouter([
   {
@@ -65,7 +66,7 @@ const router = createBrowserRouter([
             element: <KabanTrello />,
             loader: (args) =>
               import("./pages/kaban-trello/loader").then((mod) =>
-                mod.loader(args)
+                mod.loader(args),
               ),
           },
         ],
@@ -87,7 +88,7 @@ const router = createBrowserRouter([
             element: <PM />,
             loader: (args) =>
               import("./pages/project-manager/loader").then((mod) =>
-                mod.loader(args)
+                mod.loader(args),
               ),
           },
         ],
@@ -152,6 +153,10 @@ const router = createBrowserRouter([
           },
         ],
       },
+      {
+        path: "frontend-benk",
+        element: <FeBenk />,
+      },
     ],
   },
 ]);
@@ -159,5 +164,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

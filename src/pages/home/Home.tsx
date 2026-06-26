@@ -40,6 +40,12 @@ export default function Home() {
       >
         Flowchart(drawio) & UML
       </Link>
+      <Link
+        to="/frontend-benk"
+        className="text-blue-400 hover:underline hover:text-blue-300"
+      >
+        Front-end Benkmark
+      </Link>
     </div>
   );
 }
